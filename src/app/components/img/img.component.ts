@@ -14,7 +14,11 @@ export class ImgComponent implements OnInit {
 
   imageDefault = "/assets/img/descarga.png";
   
-  constructor() { }
+  constructor() { 
+    // before render
+    // No async -- one time for each component only call 1 time
+    console.log("Constructor",'imgValue =>', this.img);
+  }
 
   ngOnInit(): void {
   }

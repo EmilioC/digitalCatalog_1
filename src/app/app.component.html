@@ -5,6 +5,7 @@
     <input [(ngModel)]="imgParent" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
 </div>
 
-<app-img (loaded)="onLoaded($event)" [img]="imgParent"></app-img>
+<!-- <app-img (loaded)="onLoaded($event)" [img]="imgParent"></app-img> -->
+<app-products [product]="product" *ngFor="let product of products"></app-products>
 
 <!-- </router-outlet> -->
