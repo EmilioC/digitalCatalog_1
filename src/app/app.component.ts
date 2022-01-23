@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'digitalCatalog_1';
+
+  imgParent = 'https://www.w3schools.com/w3images/avatar5.png';
 }

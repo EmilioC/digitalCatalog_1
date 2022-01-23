@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 
 @Component({
   selector: 'app-img',
@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./img.component.scss']
 })
 export class ImgComponent implements OnInit {
+
+  @Input() img: string = "valor init";
+  heroes = [1,1,1,1,1,1];
+  
+
 
   constructor() { }
 
