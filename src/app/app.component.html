@@ -1,11 +1,548 @@
 <!-- <router-outlet> -->
-<div class="container m-5"></div>
-<div class="input-group mb-3">
-    <span class="input-group-text" id="basic-addon1">@</span>
-    <input [(ngModel)]="imgParent" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-</div>
 
-<!-- <app-img (loaded)="onLoaded($event)" [img]="imgParent"></app-img> -->
-<app-products [product]="product" *ngFor="let product of products"></app-products>
 
-<!-- </router-outlet> -->
+
+<div class="container-fluid m-5">
+
+    <div class="row">
+        <div class="col">
+            <button type="button" (click)="toggleImg()" class="btn btn-outline-danger">Ver showImg</button>
+        </div>
+        <div class="col">
+
+            <div class="badge bg-primary text" style="width: 6rem;">
+                {{showImg}}
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row bottom-4">
+        <div class="col">
+            <input [(ngModel)]="imgParent" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+    </div>
+    <br>
+
+    <!-- <app-img (loaded)="onLoaded($event)" [img]="imgParent"></app-img> -->
+    <app-img *ngIf="showImg" [img]="imgParent"></app-img>
+    <app-products [product]="product" *ngFor="let product of products"></app-products>
+
+    <div class="container">
+        <ul>
+            <li>Plantas de producci&oacute;n propias repartidas por todo el territorio nacional.</li>
+            <li>Veh&iacute;culos, desde cisternas de gas licuado a plataformas de hidr&oacute;geno.</li>
+            <li>Contenedores m&oacute;viles.</li>
+            <li>Personal t&eacute;cnico especializado.</li>
+            <li>Servicio de control del proceso de inertizaci&oacute;n.</li>
+            <li>Servicio 24 horas al d&iacute;a 7 d&iacute;a, a la semana.</li>
+        </ul>
+        <hr />
+        <p><strong>Nuestros equipos:</strong></p>
+        <ul>
+            <li>Equipos de gasificaci&oacute;n port&aacute;tiles.</li>
+            <li>Contenedor con capacidad de gasificaci&oacute;n de 1.200 Nm<sup>3</sup>/h </li>
+            <li>Isocontenedores de nitr&oacute;geno, ox&iacute;geno y CO<sub>2</sub> licuado de varios tama&ntilde;os y presiones</li>
+            <li>Gasificadores ambientales entre 600 y 1.500 Nm<sup>3</sup>/h.</li>
+            <li>Contenedor + y gasificador de vapor hasta 13.000 Nm<sup>3</sup>/h.</li>
+            <li>Resistencias el&eacute;ctricas con capacidad de gasificaci&oacute;n de hasta 300 kg/h de CO<sub>2</sub></li>
+        </ul>
+        <hr />
+        <strong>Nuestros expertos:</strong><br /> La experiencia y el asesoramiento de nuestros especialistas forman parte del servicio que ofrecemos a nuestros clientes, ayud&aacute;ndoles en el c&aacute;lculo de los vol&uacute;menes de producto necesario,
+        el control de proceso de inertizaci&oacute;n a nivel de temperatura y humedad o la necesidad de un experto t&eacute;cnico para su aplicaci&oacute;n concreta.<br />
+        <div><br />
+            <hr />
+            <img height="300" alt="Equipos y Servicios de Operaciones Puntuales" width="450" src="http://www.carburos.com/~/media/Images/Banners/microsites/instalaciones/equipos-2.jpg?h=300&&w=450&la=es-ES" /><br />
+            <hr />
+        </div>
+
+
+        <div id="secondary_menu_container">
+            <ul>
+                <li class="active"><a href="/Products/overview.aspx">Descripción general de productos</a>
+                    <ul>
+                        <li class="active"><a href="/Products/Gases.aspx">Gases</a>
+                            <ul>
+                                <li class="active"><a href="/Products/Gases/Specialty-Gases.aspx">Gases especiales</a>
+                                    <ul>
+                                        <li class="selected"><a href="/Products/Gases/Specialty-Gases/Analytical-Gases.aspx">Gases analíticos</a></li>
+                                        <li><a href="/Products/Gases/Specialty-Gases/Medical-Device-Gases.aspx">Gases para dispositivos médicos</a></li>
+                                        <li><a href="/Products/Gases/Specialty-Gases/Medicinal-Gases.aspx">Gases medicinales</a></li>
+                                        <li><a href="/Products/Gases/Specialty-Gases/PharmaBiotech.aspx">Productos farmacéuticos/biotecnología</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- AddThis Button BEGIN -->
+            <!--
+      <div class="addthis_toolbox addthis_default_style">
+        <a href="http://www.addthis.com/bookmark.php?v=250&amp;username=xa-4c35e3846b470913" class="addthis_button_compact">
+          # 
+            Translation.GetText(Translation.LocalizationFolders.Widgets, "Share or Print", true)
+          </a>
+      </div>
+      <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4c35e3846b470913"></script>
+      <script type="text/javascript">
+        var addthis_config ={
+        services_compact:'print,email,favorites,facebook,twitter,googlebuzz,linkedin,hellotxt',
+        ui_click: true}
+        /* available services: http://www.addthis.com/services/list */
+      </script>
+      -->
+            <!-- AddThis Button END -->
+        </div>
+
+
+        <div id="internal_content">
+            <div class="columns">
+                <div class="col_left">
+                    <h1>Gases analíticos
+                    </h1>
+                    <div class="text_content">
+                        <p>Los gases especiales que requieren los usuarios anal&iacute;ticos son gases con unos niveles ultrabajos de impurezas cr&iacute;ticas.&nbsp;Los gases ultrapuros Experis&reg; de Carburos Met&aacute;licos han sido desarrollados para
+                            que el usuario anal&iacute;tico pueda obtener mayor sistematicidad y precisi&oacute;n en sus an&aacute;lisis. La tecnolog&iacute;a&nbsp;BIP<sup>&reg;</sup> &uacute;nica de Air Products le garantiza el mayor nivel de pureza
+                            de los gases, asegur&aacute;ndole precisi&oacute;n en los resultados y tranquilidad para que pueda concentrarse en su negocio.</p>
+                    </div>
+
+                </div>
+
+                <div class="col_right">
+
+
+                    <div id="contacts_container">
+                        <h2>
+                            Informaci&#243;n de contacto
+                        </h2>
+                        <ul>
+                            <li><a class="modal vcard-info" href="/Settings/Contacts/1-Country Sites/es-gases-contacts.aspx" data-contact-list="{0190F9DF-97FD-4F86-8658-364020A09B3B}">Tel&#233;fono de contacto</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="clear"></div>
+            </div>
+
+            <div class="product_table">
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <thead>
+                        <tr>
+                            <th class="col1">Nombre del producto</th>
+                            <th class="col2">Descripción/ventajas</th>
+                            <th class="col3">Descargas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="col1" data-GUID="9ad4489d-fefb-46f3-8ff7-b0e53f08466a">
+                                <p>Acetileno Premier/Premium</p>
+                            </td>
+                            <td class="col2">
+                                <p>Utilizado como gas combustible, el acetileno Premier/Premium contiene niveles bajos de PH<sub>3</sub> y H<sub>2</sub>S para garantizar una llama más limpia, menos interferencia y mejores resultados analíticos.</p>
+                            </td>
+                            <td class="col3">
+                                <ul>
+                                    <li data-GUID="8d60618a-2ac0-4ef2-ad7c-157a5d59c42c"><a class="pdf" title="Gases ultrapuros Experis®" href="/~/media/downloads/a/air/data-sheets/es-ES-air-datasheet.pdf?productType=Gases&amp;productLevel1=Specialty-Gases&amp;productLevel2=Analytical-Gases&amp;productLevel3=Acetylene-PremierPremium"
+                                            target="_blank">Hoja de datos</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="mobile-content">
+                            <td colspan="3">
+                                <p>Utilizado como gas combustible, el acetileno Premier/Premium contiene niveles bajos de PH<sub>3</sub> y H<sub>2</sub>S para garantizar una llama más limpia, menos interferencia y mejores resultados analíticos.</p>
+                            </td>
+                        </tr>
+                        <tr class="alt">
+                            <td class="col1" data-GUID="d00a5f97-61d5-4bce-8222-738ac8525e7d">
+                                <p>Argón Premier/Premium</p>
+                            </td>
+                            <td class="col2">
+                                <p>El argón es valorado por sus propiedades inertes tanto en estado líquido como en estado gaseoso. El argón Premier es el gas perfecto para aplicaciones como el ICP.</p>
+                            </td>
+                            <td class="col3">
+                                <ul>
+                                    <li data-GUID="0b321e95-c942-49f4-9843-f2fab87ba52d"><a class="pdf" title="Gases ultrapuros Experis®" href="/~/media/downloads/a/air/data-sheets/es-ES-air-datasheet.pdf?productType=Gases&amp;productLevel1=Specialty-Gases&amp;productLevel2=Analytical-Gases&amp;productLevel3=Argon-Premier-Premium"
+                                            target="_blank">Hoja de datos</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="mobile-content">
+                            <td colspan="3">
+                                <p>El argón es valorado por sus propiedades inertes tanto en estado líquido como en estado gaseoso. El argón Premier es el gas perfecto para aplicaciones como el ICP.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col1" data-GUID="dff7fecb-8960-43ba-a323-a48198046642">
+                                <p>Dióxido de carbono ultrapuro líquido</p>
+                            </td>
+                            <td class="col2">
+                                <p>El dióxido de carbono ultrapuro líquido , con sus niveles bajos de impurezas, es idóneo para la cromatografía de fluidos supercríticos. <br /></p>
+                            </td>
+                            <td class="col3">
+                                <ul>
+                                    <li data-GUID="0b321e95-c942-49f4-9843-f2fab87ba52d"><a class="pdf" title="Gases ultrapuros Experis®" href="/~/media/downloads/a/air/data-sheets/es-ES-air-datasheet.pdf?productType=Gases&amp;productLevel1=Specialty-Gases&amp;productLevel2=Analytical-Gases&amp;productLevel3=Carbon-Dioxide-UltraPure-Liquid"
+                                            target="_blank">Hoja de datos</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="mobile-content">
+                            <td colspan="3">
+                                <p>El dióxido de carbono ultrapuro líquido , con sus niveles bajos de impurezas, es idóneo para la cromatografía de fluidos supercríticos. <br /></p>
+                            </td>
+                        </tr>
+                        <tr class="alt">
+                            <td class="col1" data-GUID="3d21af00-be5d-42c2-8bf9-1ed59933d643">
+                                <p>Gas argón BIP<sup>®</sup></p>
+                            </td>
+                            <td class="col2">
+                                <p>El gas argón BIP<sup>®</sup> o BIP<sup>®</sup> PLUS con unos niveles ultrabajos de impurezas de oxígeno, agua e hidrocarburo es el gas ideal para muchos procesos si se desea garantizar la precisión de los análisis a concentraciones
+                                    bajas. <br /></p>
+                            </td>
+                            <td class="col3">
+                                <ul>
+                                    <li data-GUID="2dc1f5da-529c-496c-8ffa-4f5452c89d9e"><a class="pdf" title="BIP® PLUS gas" href="/~/media/downloads/data-sheets/B/en-bip-plus-gas-datasheet.pdf?productType=Gases&amp;productLevel1=Specialty-Gases&amp;productLevel2=Analytical-Gases&amp;productLevel3=Argon-BIP-gas"
+                                            target="_blank">Data Sheet</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="mobile-content">
+                            <td colspan="3">
+                                <p>El gas argón BIP<sup>®</sup> o BIP<sup>®</sup> PLUS con unos niveles ultrabajos de impurezas de oxígeno, agua e hidrocarburo es el gas ideal para muchos procesos si se desea garantizar la precisión de los análisis a concentraciones
+                                    bajas. <br /></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col1" data-GUID="023db809-6452-448d-9070-6a1ddbf28be3">
+                                <p>Gas helio BIP<sup>®</sup></p>
+                            </td>
+                            <td class="col2">
+                                <p>El helio suministrado mediante nuestra tecnología BIP<sup>®</sup> patentada contiene niveles muy bajos de oxígeno, hidrocarburos y agua, lo que lo convierte en un gas portador y de relleno idóneo para un gran número de
+                                    aplicaciones de laboratorio, ya que minimiza la purga de la columna y el ruido de línea base. De este modo se consiguen unos análisis más precisos.</p>
+                            </td>
+                            <td class="col3">
+                                <ul>
+                                    <li data-GUID="3c63abb9-4677-41f9-8f71-25c0d53f630f"><a class="msds" title="MSDS" href="/sitecore/media%20library/downloads/h/helium-bip-gas/msds/Helium%20BIP%20Gas%20-%20MSDS.aspx" target="_blank">MSDS</a></li>
+                                    <li data-GUID="2dc1f5da-529c-496c-8ffa-4f5452c89d9e"><a class="pdf" title="BIP® PLUS gas" href="/~/media/downloads/data-sheets/B/en-bip-plus-gas-datasheet.pdf?productType=Gases&amp;productLevel1=Specialty-Gases&amp;productLevel2=Analytical-Gases&amp;productLevel3=Helium-BIP-gas"
+                                            target="_blank">Data Sheet</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="mobile-content">
+                            <td colspan="3">
+                                <p>El helio suministrado mediante nuestra tecnología BIP<sup>®</sup> patentada contiene niveles muy bajos de oxígeno, hidrocarburos y agua, lo que lo convierte en un gas portador y de relleno idóneo para un gran número de
+                                    aplicaciones de laboratorio, ya que minimiza la purga de la columna y el ruido de línea base. De este modo se consiguen unos análisis más precisos.</p>
+                            </td>
+                        </tr>
+                        <tr class="alt">
+                            <td class="col1" data-GUID="8048cdf2-2355-48df-b5dd-fc8323379bd8">
+                                <p>Gas helio BIP® ECD</p>
+                            </td>
+                            <td class="col2">
+                                <p>El detector ECD es muy sensible a los halocarburos, por lo que el gas helio BIP® ECD, con sus niveles ultrabajos de halocarburos, es el gas portador perfecto para garantizar unos análisis de gran precisión.</p>
+                            </td>
+                            <td class="col3">
+                                <ul>
+                                    <li data-GUID="40038416-3414-43f7-a4ca-654da0047068"><a class="msds" title="MSDS" href="/sitecore/media%20library/downloads/h/helium-bip-ecd-gas/msds/Helium%20BIP%20ECD%20Gas%20-%20MSDS.aspx" target="_blank">MSDS</a></li>
+                                    <li data-GUID="2dc1f5da-529c-496c-8ffa-4f5452c89d9e"><a class="pdf" title="BIP® PLUS gas" href="/~/media/downloads/data-sheets/B/en-bip-plus-gas-datasheet.pdf?productType=Gases&amp;productLevel1=Specialty-Gases&amp;productLevel2=Analytical-Gases&amp;productLevel3=Helium-BIP-ECD-gas"
+                                            target="_blank">Data Sheet</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="mobile-content">
+                            <td colspan="3">
+                                <p>El detector ECD es muy sensible a los halocarburos, por lo que el gas helio BIP® ECD, con sus niveles ultrabajos de halocarburos, es el gas portador perfecto para garantizar unos análisis de gran precisión.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col1" data-GUID="092afc96-ec75-42b0-a293-5e1add58b6e3">
+                                <p>Gas helio Premier/Premium</p>
+                            </td>
+                            <td class="col2">
+                                <p>El bajo nivel de impurezas de N<sub>2</sub> del helio Premier lo convierte en el gas de referencia ideal para los analizadores elementales.</p>
+                            </td>
+                            <td class="col3">
+                                <ul>
+                                    <li data-GUID="5a077518-40cf-43e1-a320-1eb55d58d0e0"><a class="msds" title="MSDS" href="/sitecore/media%20library/downloads/h/helium-premierpremium-gas/msds/Helium%20Premier%20Premium%20Gas%20-%20MSDS.aspx" target="_blank">MSDS</a></li>
+                                    <li data-GUID="9cc6fc81-b94f-4b05-b443-adb5d170f603"><a class="pdf" title="Helium Premier/Premium Gas" href="/~/media/downloads/h/helium-premierpremium-gas/data-sheets/en-helium-premier-premium-gas-datasheet.pdf?productType=Gases&amp;productLevel1=Specialty-Gases&amp;productLevel2=Analytical-Gases&amp;productLevel3=Helium-PremierPremium-Gas"
+                                            target="_blank">Data Sheet</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="mobile-content">
+                            <td colspan="3">
+                                <p>El bajo nivel de impurezas de N<sub>2</sub> del helio Premier lo convierte en el gas de referencia ideal para los analizadores elementales.</p>
+                            </td>
+                        </tr>
+                        <tr class="alt">
+                            <td class="col1" data-GUID="7a825bc7-3c88-447c-93e3-3adf9aab3654">
+                                <p>Gas Helium BIP<sup>®</sup> PLUS</p>
+                            </td>
+                            <td class="col2">
+                                <p>Debido a la sensibilidad del detector de emisión atómica (AED), los fabricantes recomiendan una pureza mínima de 6,0, lo que hace del gas Helium BIP<sup>®</sup> PLUS un gas portador ideal para la obtención de análisis precisos.</p>
+                            </td>
+                            <td class="col3">
+                                <ul>
+                                    <li data-GUID="2dc1f5da-529c-496c-8ffa-4f5452c89d9e"><a class="pdf" title="BIP® PLUS gas" href="/~/media/downloads/data-sheets/B/en-bip-plus-gas-datasheet.pdf?productType=Gases&amp;productLevel1=Specialty-Gases&amp;productLevel2=Analytical-Gases&amp;productLevel3=Helium-BIP-Plus-gas"
+                                            target="_blank">Data Sheet</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="mobile-content">
+                            <td colspan="3">
+                                <p>Debido a la sensibilidad del detector de emisión atómica (AED), los fabricantes recomiendan una pureza mínima de 6,0, lo que hace del gas Helium BIP<sup>®</sup> PLUS un gas portador ideal para la obtención de análisis precisos.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col1" data-GUID="4874ab8c-d402-40c3-9629-2c3c411f95b4">
+                                <p>Gas hidrógeno BIP<sup>®</sup></p>
+                            </td>
+                            <td class="col2">
+                                <p>El hidrógeno suministrado mediante nuestra tecnología BIP<sup>®</sup> patentada contiene niveles muy bajos de oxígeno, agua e hidrocarburos, lo que lo convierte en un gas portador, de relleno y detector idóneo para la cromatografía
+                                    de gases, ya que minimiza la purga de la columna y el ruido de línea base. De este modo se consiguen unos análisis más precisos.</p>
+                            </td>
+                            <td class="col3">
+                                <ul>
+                                    <li data-GUID="9c324bd3-3cdb-40e5-bafb-a211691bcf35"><a class="msds" title="MSDS" href="/sitecore/media%20library/downloads/h/hydrogen-bip-gas/msds/Hydrogen%20BIP%20Gas%20-%20MSDS.aspx" target="_blank">MSDS</a></li>
+                                    <li data-GUID="86e0b7bc-90e5-4231-b987-08f99793d85b"><a class="pdf" title="Hydrogen BIP®" href="/~/media/downloads/h/hydrogen-bip/data-sheets/en-hydrogen-bip-datasheet.pdf?productType=Gases&amp;productLevel1=Specialty-Gases&amp;productLevel2=Analytical-Gases&amp;productLevel3=Hydrogen-BIP-gas"
+                                            target="_blank">Data Sheet</a></li>
+                                    <li data-GUID="08202d3c-3f8c-455f-94ac-03568f526f83"><a class="pdf" title="Hydrogen BIP" href="/~/media/downloads/h/hydrogen-bip/data-sheets/en-hydrogen-bip-datasheet-250-08-214.pdf?productType=Gases&amp;productLevel1=Specialty-Gases&amp;productLevel2=Analytical-Gases&amp;productLevel3=Hydrogen-BIP-gas"
+                                            target="_blank">Data Sheet</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="mobile-content">
+                            <td colspan="3">
+                                <p>El hidrógeno suministrado mediante nuestra tecnología BIP<sup>®</sup> patentada contiene niveles muy bajos de oxígeno, agua e hidrocarburos, lo que lo convierte en un gas portador, de relleno y detector idóneo para la cromatografía
+                                    de gases, ya que minimiza la purga de la columna y el ruido de línea base. De este modo se consiguen unos análisis más precisos.</p>
+                            </td>
+                        </tr>
+                        <tr class="alt">
+                            <td class="col1" data-GUID="ec4de6d4-d34c-4a83-b8a7-3c216d7793dc">
+                                <p>Gas hidrógeno BiP® PLUS</p>
+                            </td>
+                            <td class="col2">
+                                <p>Cuando se analizan muchos picos a bajas concentraciones, el gas hidr&oacute;geno BIP&reg; PLUS, con sus extremadamente bajos niveles de impurezas de ox&iacute;geno, hidrocarburos y agua, es el gas portador ideal para lograr
+                                    unos an&aacute;lisis precisos.</p>
+                            </td>
+                            <td class="col3">
+                                <ul>
+                                    <li data-GUID="d690418b-9f88-43fc-aa92-548ba77533c7"><a class="msds" title="MSDS" href="/sitecore/media%20library/downloads/h/hydrogen-bip-plus-gas/msds/Hydrogen%20BIP%20PLUS%20Gas%20-%20MSDS.aspx" target="_blank">MSDS</a></li>
+                                    <li data-GUID="01dfa8a1-f5d4-43e8-ac42-01faf7cb408e"><a class="pdf" title="Hydrogen BIP® PLUS gas" href="/~/media/downloads/h/hydrogen-bip-plus-gas/data-sheets/en-hydrogen-bip-plus-gas-datasheet.pdf?productType=Gases&amp;productLevel1=Specialty-Gases&amp;productLevel2=Analytical-Gases&amp;productLevel3=Hydrogen-BIP-PLUS-gas"
+                                            target="_blank">Data Sheet</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="mobile-content">
+                            <td colspan="3">
+                                <p>Cuando se analizan muchos picos a bajas concentraciones, el gas hidr&oacute;geno BIP&reg; PLUS, con sus extremadamente bajos niveles de impurezas de ox&iacute;geno, hidrocarburos y agua, es el gas portador ideal para lograr
+                                    unos an&aacute;lisis precisos.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col1" data-GUID="9b5686ba-07e4-4a45-b3ce-0cafa4deefb5">
+                                <p>Gas nitrógeno BIP<sup>®</sup></p>
+                            </td>
+                            <td class="col2">
+                                <p>El nitrógeno suministrado mediante nuestra tecnología BIP<sup>®</sup> patentada contiene niveles muy bajos de oxígeno y agua, lo que lo convierte en un gas portador y de relleno idóneo para aplicaciones de laboratorio altamente
+                                    sensibles, ya que minimiza la purga de la columna y el ruido de línea base en la mayoría de los análisis de precisión. En los análisis a menos de 1 ppm debe considerarse el uso de la categoría BIP<sup>®</sup> PLUS.</p>
+                            </td>
+                            <td class="col3">
+                                <ul>
+                                    <li data-GUID="dfe38ca6-c60f-4b3a-b2a8-c02e89be9941"><a class="msds" title="MSDS" href="/sitecore/media%20library/downloads/n/nitrogen-bip-gas/msds/Nitrogen%20BIP%20Gas%20-%20MSDS.aspx" target="_blank">MSDS</a></li>
+                                    <li data-GUID="2dc1f5da-529c-496c-8ffa-4f5452c89d9e"><a class="pdf" title="BIP® PLUS gas" href="/~/media/downloads/data-sheets/B/en-bip-plus-gas-datasheet.pdf?productType=Gases&amp;productLevel1=Specialty-Gases&amp;productLevel2=Analytical-Gases&amp;productLevel3=Nitrogen-BIP-gas"
+                                            target="_blank">Data Sheet</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="mobile-content">
+                            <td colspan="3">
+                                <p>El nitrógeno suministrado mediante nuestra tecnología BIP<sup>®</sup> patentada contiene niveles muy bajos de oxígeno y agua, lo que lo convierte en un gas portador y de relleno idóneo para aplicaciones de laboratorio altamente
+                                    sensibles, ya que minimiza la purga de la columna y el ruido de línea base en la mayoría de los análisis de precisión. En los análisis a menos de 1 ppm debe considerarse el uso de la categoría BIP<sup>®</sup> PLUS.</p>
+                            </td>
+                        </tr>
+                        <tr class="alt">
+                            <td class="col1" data-GUID="0a35c868-b819-4eee-8316-8583e600d15c">
+                                <p>Gas nitrógeno BIP<sup>®</sup> ECD</p>
+                            </td>
+                            <td class="col2">
+                                <p>El detector ECD es muy sensible a los halocarburos, por lo que el gas nitrógeno BIP® ECD, con sus niveles ultrabajos de halocarburos, es el gas portador y de relleno perfecto para garantizar unos análisis de gran precisión.</p>
+                            </td>
+                            <td class="col3">
+                                <ul>
+                                    <li data-GUID="f18a630a-c6f0-41b1-886a-11710c6b13d9"><a class="msds" title="MSDS" href="/sitecore/media%20library/downloads/n/nitrogen-bip-ecd-gas/msds/Nitrogen%20BIP%20ECD%20Gas%20-%20MSDS.aspx" target="_blank">MSDS</a></li>
+                                    <li data-GUID="2dc1f5da-529c-496c-8ffa-4f5452c89d9e"><a class="pdf" title="BIP® PLUS gas" href="/~/media/downloads/data-sheets/B/en-bip-plus-gas-datasheet.pdf?productType=Gases&amp;productLevel1=Specialty-Gases&amp;productLevel2=Analytical-Gases&amp;productLevel3=Nitrogen-BIP-ECD-gas"
+                                            target="_blank">Data Sheet</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="mobile-content">
+                            <td colspan="3">
+                                <p>El detector ECD es muy sensible a los halocarburos, por lo que el gas nitrógeno BIP® ECD, con sus niveles ultrabajos de halocarburos, es el gas portador y de relleno perfecto para garantizar unos análisis de gran precisión.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col1" data-GUID="74efcea0-1f09-4440-b49d-e3f1e7dbc94a">
+                                <p>Gas nitrógeno BIP<sup>®</sup> PLUS</p>
+                            </td>
+                            <td class="col2">
+                                <p>Cuando se analizan muchos picos y concentraciones bajas, el gas nitrógeno BIP<sup>®</sup> PLUS, con sus niveles bajísimos de impurezas de oxígeno, hidrocarburos y agua, es el gas portador y de relleno ideal para lograr
+                                    unos análisis precisos. Para los usuarios de grandes volúmenes, el servicio CroyEase® es el modo de suministro ideal.</p>
+                            </td>
+                            <td class="col3">
+                                <ul>
+                                    <li data-GUID="2368c120-2c2e-46a4-a34b-ca674189ca9e"><a class="msds" title="MSDS" href="/sitecore/media%20library/downloads/n/nitrogen-bip-plus-gas/msds/Nitrogen%20BIP%20PLUS%20Gas%20-%20MSDS.aspx" target="_blank">MSDS</a></li>
+                                    <li data-GUID="2dc1f5da-529c-496c-8ffa-4f5452c89d9e"><a class="pdf" title="BIP® PLUS gas" href="/~/media/downloads/data-sheets/B/en-bip-plus-gas-datasheet.pdf?productType=Gases&amp;productLevel1=Specialty-Gases&amp;productLevel2=Analytical-Gases&amp;productLevel3=Nitrogen-BIP-PLUS-gas"
+                                            target="_blank">Data Sheet</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="mobile-content">
+                            <td colspan="3">
+                                <p>Cuando se analizan muchos picos y concentraciones bajas, el gas nitrógeno BIP<sup>®</sup> PLUS, con sus niveles bajísimos de impurezas de oxígeno, hidrocarburos y agua, es el gas portador y de relleno ideal para lograr
+                                    unos análisis precisos. Para los usuarios de grandes volúmenes, el servicio CroyEase® es el modo de suministro ideal.</p>
+                            </td>
+                        </tr>
+                        <tr class="alt">
+                            <td class="col1" data-GUID="92ab34ea-a71d-4784-b82b-8fcd3537df13">
+                                <p>Gas nitrógeno Premier/Premium</p>
+                            </td>
+                            <td class="col2">
+                                <p>El nitrógeno Premier/Premium es ideal como gas de refrigeración de ICP.</p>
+                            </td>
+                            <td class="col3">
+                                <ul>
+                                    <li data-GUID="0b321e95-c942-49f4-9843-f2fab87ba52d"><a class="pdf" title="Gases ultrapuros Experis®" href="/~/media/downloads/a/air/data-sheets/es-ES-air-datasheet.pdf?productType=Gases&amp;productLevel1=Specialty-Gases&amp;productLevel2=Analytical-Gases&amp;productLevel3=Nitrogen-PremierPremium-gas"
+                                            target="_blank">Hoja de datos</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="mobile-content">
+                            <td colspan="3">
+                                <p>El nitrógeno Premier/Premium es ideal como gas de refrigeración de ICP.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col1" data-GUID="2af9e5c3-8466-427e-a4a1-911255ff281b">
+                                <p>Líquido Premier de dióxido de carbono</p>
+                            </td>
+                            <td class="col2">
+                                <p>Usado para enfriar rápidamente la primera columna del cromatógrafo de gases, el líquido Premier de dióxido de carbono es ideal para esta aplicación. <br /></p>
+                            </td>
+                            <td class="col3">
+                                <ul>
+                                    <li data-GUID="0b321e95-c942-49f4-9843-f2fab87ba52d"><a class="pdf" title="Gases ultrapuros Experis®" href="/~/media/downloads/a/air/data-sheets/es-ES-air-datasheet.pdf?productType=Gases&amp;productLevel1=Specialty-Gases&amp;productLevel2=Analytical-Gases&amp;productLevel3=Carbon-Dioxide-Premier-Liquid"
+                                            target="_blank">Hoja de datos</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="mobile-content">
+                            <td colspan="3">
+                                <p>Usado para enfriar rápidamente la primera columna del cromatógrafo de gases, el líquido Premier de dióxido de carbono es ideal para esta aplicación. <br /></p>
+                            </td>
+                        </tr>
+                        <tr class="alt">
+                            <td class="col1" data-GUID="91fb3175-d49b-49f5-9332-cdadec11be1e">
+                                <p>Mezclas de procesos</p>
+                            </td>
+                            <td class="col2">
+                                <p>Nuestra amplia gama de mezclas de gases de proceso Experis<sup>®</sup> para el crecimiento de culturas incluye un 5% o un 10% de CO<sub>2</sub> en N<sub>2</sub>, un 10% de CO<sub>2</sub> y O<sub>2</sub> en N<sub>2</sub>                                    y un 10% de O<sub>2</sub> en N<sub>2</sub>. Pueden suministrarse en botellas de diversos tamaños.</p>
+                            </td>
+                            <td class="col3">
+                                <ul>
+                                    <li data-GUID="3a706c96-3986-4e56-916a-4e260602db5c"><a class="pdf" title="Experis Gas Mixtures: Wherever accuracy, stability and reliability are essential" href="/~/media/downloads/c/calibration-mixtures/data-sheets/en-calibration-mixtures-datasheet.pdf?productType=Gases&amp;productLevel1=Specialty-Gases&amp;productLevel2=Analytical-Gases&amp;productLevel3=Process-Mixtures"
+                                            target="_blank">Data Sheet</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="mobile-content">
+                            <td colspan="3">
+                                <p>Nuestra amplia gama de mezclas de gases de proceso Experis<sup>®</sup> para el crecimiento de culturas incluye un 5% o un 10% de CO<sub>2</sub> en N<sub>2</sub>, un 10% de CO<sub>2</sub> y O<sub>2</sub> en N<sub>2</sub>                                    y un 10% de O<sub>2</sub> en N<sub>2</sub>. Pueden suministrarse en botellas de diversos tamaños.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col1" data-GUID="3cdaa4a5-a57d-41f8-b1ad-247b0bf5e523">
+                                <p>Nitrogen Premier/Premium o CryoEase<sup>®</sup> N<sub>2</sub></p>
+                            </td>
+                            <td class="col2">
+                                <p>Cuando se emplea nitrógeno para aportar un grado de nebulización adicional a aerosoles de gran caudal en LC-MS, Nitrógeno Premier se muestra como el gas ideal. Para usuarios de grandes volúmenes que requieren un suministro
+                                    continuo, el servicio CryoEase<sup>®</sup> es el método de suministro ideal. <br /></p>
+                            </td>
+                            <td class="col3">
+                                <ul>
+                                    <li data-GUID="044f492f-a1bb-49ca-a901-d91b7e3ee112"><a class="pdf" title="Nitrogen Premier/Premium or CryoEase" href="/~/media/downloads/n/nitrogen-premierpremium-or-cryoease/data-sheets/en-nitrogen-premier-premium-or-cryoease-datasheet.pdf?productType=Gases&amp;productLevel1=Specialty-Gases&amp;productLevel2=Analytical-Gases&amp;productLevel3=Nitrogen-PremierPremium-or-CryoEase"
+                                            target="_blank">Data Sheet</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="mobile-content">
+                            <td colspan="3">
+                                <p>Cuando se emplea nitrógeno para aportar un grado de nebulización adicional a aerosoles de gran caudal en LC-MS, Nitrógeno Premier se muestra como el gas ideal. Para usuarios de grandes volúmenes que requieren un suministro
+                                    continuo, el servicio CryoEase<sup>®</sup> es el método de suministro ideal. <br /></p>
+                            </td>
+                        </tr>
+                        <tr class="alt">
+                            <td class="col1" data-GUID="3ef0058f-1e54-438d-8f1e-f0e282db8785">
+                                <p>Óxido nitroso</p>
+                            </td>
+                            <td class="col2">
+                                <p>Cuando se usa como oxidante, el óxido nitroso contiene niveles bajos de agua, hidrocarburos, CO y CO<sub>2</sub> para garantizar una llama más limpia, menos interferencia y mejores resultados analíticos. <br /></p>
+                            </td>
+                            <td class="col3"></td>
+                        </tr>
+                        <tr class="mobile-content">
+                            <td colspan="3">
+                                <p>Cuando se usa como oxidante, el óxido nitroso contiene niveles bajos de agua, hidrocarburos, CO y CO<sub>2</sub> para garantizar una llama más limpia, menos interferencia y mejores resultados analíticos. <br /></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col1" data-GUID="6f9b32cf-dde5-4e0a-9e4f-712946fa9c15">
+                                <p>Oxígeno UltraPuro</p>
+                            </td>
+                            <td class="col2">
+                                <p>Gracias a su baja concentración de impurezas, el oxígeno UltraPuro es el gas reactivo perfecto para aumentar la sensibilidad de los detectores de emisión atómica (AED).</p>
+                            </td>
+                            <td class="col3">
+                                <ul>
+                                    <li data-GUID="1652ef11-2312-4892-a1ae-7263ca69fb72"><a class="msds" title="MSDS" href="/sitecore/media%20library/downloads/o/oxygen-ultrapure/msds/Oxygen%20UltraPure%20-%20MSDS.aspx" target="_blank">MSDS</a></li>
+                                    <li data-GUID="3e291d68-0c9c-4245-9d32-ad342417c275"><a class="pdf" title="Experis Ultra-High Purity Gases Data Sheet" href="/~/media/downloads/o/oxygen-ultrapure/data-sheets/en-experis-ultra-high-purity-gases-datasheet-250-03-001.pdf?productType=Gases&amp;productLevel1=Specialty-Gases&amp;productLevel2=Analytical-Gases&amp;productLevel3=Oxygen-UltraPure"
+                                            target="_blank">Data Sheet</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="mobile-content">
+                            <td colspan="3">
+                                <p>Gracias a su baja concentración de impurezas, el oxígeno UltraPuro es el gas reactivo perfecto para aumentar la sensibilidad de los detectores de emisión atómica (AED).</p>
+                            </td>
+                        </tr>
+                        <tr class="alt">
+                            <td class="col1" data-GUID="f0b1281a-b31a-45c1-8dfc-48942b14002d">
+                                <p>Zero Air</p>
+                            </td>
+                            <td class="col2">
+                                <p>Zero Air, con sus niveles ultrabajos de impurezas de hidrocarburos, es un gas portador perfecto para su uso en la GC-FID para reducir el ruido de línea base y garantizar la sensibilidad del detector.</p>
+                            </td>
+                            <td class="col3">
+                                <ul>
+                                    <li data-GUID="8d60618a-2ac0-4ef2-ad7c-157a5d59c42c"><a class="pdf" title="Gases ultrapuros Experis®" href="/~/media/downloads/a/air/data-sheets/es-ES-air-datasheet.pdf?productType=Gases&amp;productLevel1=Specialty-Gases&amp;productLevel2=Analytical-Gases&amp;productLevel3=Zero-Air"
+                                            target="_blank">Hoja de datos</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="mobile-content">
+                            <td colspan="3">
+                                <p>Zero Air, con sus niveles ultrabajos de impurezas de hidrocarburos, es un gas portador perfecto para su uso en la GC-FID para reducir el ruido de línea base y garantizar la sensibilidad del detector.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="clear"></div>
+
+
+
+    </div>
+    <!-- </router-outlet> -->
