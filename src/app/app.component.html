@@ -1,7 +1,10 @@
 <!-- <router-outlet> -->
 <div class="container m-5"></div>
-<p><input type="text" [(ngModel)]="imgParent" /></p>
+<div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">@</span>
+    <input [(ngModel)]="imgParent" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+</div>
 
-<app-img [img]="imgParent"></app-img>
+<app-img (loaded)="onLoaded($event)" [img]="imgParent"></app-img>
 
 <!-- </router-outlet> -->

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   imgParent = 'https://www.w3schools.com/w3images/avatar5.png';
+
+onLoaded(img:string){
+  console.log(img);
+}
 }
