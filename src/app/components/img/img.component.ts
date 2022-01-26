@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, OnChanges, AfterViewInit, OnDestroy} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnChanges, AfterViewInit, OnDestroy, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-img',
@@ -7,7 +7,16 @@ import { Component, OnInit, Input, Output, EventEmitter, OnChanges, AfterViewIni
 })
 export class ImgComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy {
 
-  @Input() img: string = '';
+  // Determinar que un input ha cambiado
+  img: string = '';
+  
+  @Input('img') 
+  set changeImg(newImg: string){
+    this.img = newImg;
+    console.log( ' change just img => ', this.img);
+  }
+ // Forma original del input @Input() img: string = '';
+
   @Output() loaded = new EventEmitter<string>();
 
   heroes = [1,1];
@@ -24,10 +33,15 @@ export class ImgComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy
     console.log("Constructor",'imgValue =>', this.img);
   }
 
-  ngOnChanges(){
+  ngOnChanges( changes: SimpleChanges){
     // Before render
     // The function is update the changes in the inputs
     // Working many times
+    console.log('ngOnChanges', 'imgValue =>', this.img);
+    console.log(changes);
+  //   //Para evaluar los cambios en los inputs, evaluan de forma individual
+  //   if (changes.)´
+  //   //code
   }
 
   ngOnInit(): void {
