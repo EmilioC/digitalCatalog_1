@@ -1,9 +1,4 @@
-<!-- <router-outlet> -->
-
-
-
-<div class="container-fluid m-5">
-
+<div class="container m-5">
     <div class="row">
         <div class="col">
             <button type="button" (click)="toggleImg()" class="btn btn-outline-danger">Ver showImg</button>
@@ -16,6 +11,7 @@
         </div>
     </div>
     <br>
+
     <div class="row bottom-4">
         <div class="col">
             <input [(ngModel)]="imgParent" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
@@ -23,11 +19,28 @@
     </div>
     <br>
 
-    <!-- <app-img (loaded)="onLoaded($event)" [img]="imgParent"></app-img> -->
-    <app-img *ngIf="showImg" [img]="imgParent"></app-img>
-    <app-products [product]="product" *ngFor="let product of products"></app-products>
+    <app-img *ngIf="showImg" [img]="imgParent">
+    </app-img>
+    <app-products></app-products>
+</div>
 
-    <div class="container">
+
+
+
+<!-- <router-outlet> -->
+
+<!-- <div class="container-fluid m-5">
+
+    
+    <br>
+
+    <br> -->
+
+<!-- <app-img (loaded)="onLoaded($event)" [img]="imgParent"></app-img> -->
+
+<!-- <app-products [product]="product" *ngFor="let product of products"></app-products> -->
+
+<!-- <div class="container">
         <ul>
             <li>Plantas de producci&oacute;n propias repartidas por todo el territorio nacional.</li>
             <li>Veh&iacute;culos, desde cisternas de gas licuado a plataformas de hidr&oacute;geno.</li>
@@ -48,15 +61,15 @@
         </ul>
         <hr />
         <strong>Nuestros expertos:</strong><br /> La experiencia y el asesoramiento de nuestros especialistas forman parte del servicio que ofrecemos a nuestros clientes, ayud&aacute;ndoles en el c&aacute;lculo de los vol&uacute;menes de producto necesario,
-        el control de proceso de inertizaci&oacute;n a nivel de temperatura y humedad o la necesidad de un experto t&eacute;cnico para su aplicaci&oacute;n concreta.<br />
-        <div><br />
+        el control de proceso de inertizaci&oacute;n a nivel de temperatura y humedad o la necesidad de un experto t&eacute;cnico para su aplicaci&oacute;n concreta.<br /> -->
+<!-- <div><br />
             <hr />
             <img height="300" alt="Equipos y Servicios de Operaciones Puntuales" width="450" src="http://www.carburos.com/~/media/Images/Banners/microsites/instalaciones/equipos-2.jpg?h=300&&w=450&la=es-ES" /><br />
             <hr />
-        </div>
+        </div> -->
 
 
-        <!-- <div id="secondary_menu_container">
+<!-- <div id="secondary_menu_container">
             <ul>
                 <li class="active"><a href="/Products/overview.aspx">Descripción general de productos</a>
                     <ul>
@@ -76,8 +89,8 @@
                 </li>
             </ul>
 
-            <!-- AddThis Button BEGIN -->
-        <!--
+         AddThis Button BEGIN -->
+<!--
       <div class="addthis_toolbox addthis_default_style">
         <a href="http://www.addthis.com/bookmark.php?v=250&amp;username=xa-4c35e3846b470913" class="addthis_button_compact">
           # 
@@ -92,10 +105,10 @@
         /* available services: http://www.addthis.com/services/list */
       </script>
       -->
-        <!-- AddThis Button END -->
-    </div>
+<!-- AddThis Button END -->
+<!-- </div> -->
 
-
+<!-- 
     <div id="internal_content">
         <div class="columns">
             <div class="col_left">
