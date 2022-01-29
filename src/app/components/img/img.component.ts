@@ -19,7 +19,7 @@ export class ImgComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy
 
   @Output() loaded = new EventEmitter<string>();
 
-  heroes = [1,1];
+  heroes = [];
 
   imageDefault = "/assets/img/descarga.png";
   counter = 0;

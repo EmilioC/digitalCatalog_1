@@ -1,4 +1,11 @@
-<div *ngFor="let heroe of heroes; let i = index" class="card mb-3" style="max-width: 540px;">
+<div class="col-md-4">
+    <img [src]="img" (load)="imgLoaded()" (error)="imgError()" class="img-fluid rounded-start" *ngIf="img; else elseImg">
+    <ng-template #elseImg>
+        <img [src]="imageDefault" class="img-fluid rounded-start">
+    </ng-template>
+</div>
+
+<!-- <div *ngFor="let heroe of heroes; let i = index" class="card mb-3" style="max-width: 540px; background-color: blue;">
     <div class="row g-0">
         <div class="col-md-4">
             <img [src]="img" (load)="imgLoaded()" (error)="imgError()" class="img-fluid rounded-start" *ngIf="img; else elseImg">
@@ -15,4 +22,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
