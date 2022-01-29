@@ -1,5 +1,10 @@
 <div class="container">
-    <app-product [product]="product" *ngFor="let product of products">
+    <button type="button" class="btn btn-primary">
+        Productos 
+        <span class="badge bg-secondary">{{myShoppingCart.length}}</span>
+        <span class="badge bg-secondary">{{total}}</span>
+      </button>
+    <app-product [product]="product" *ngFor="let product of products" (addedProduct)="onAddToShoppingCart($event)">
     </app-product>
 </div>
 

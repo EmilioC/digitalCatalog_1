@@ -2,9 +2,9 @@
     <a class="navbar-brand" href="#">
         <img src="/assets/img/carburos-logo.png" width="90" height="30" alt=""> Catálogo Digital
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-    </button>
+    </button> -->
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
@@ -14,13 +14,11 @@
             <li class="nav-item" routerLinkActive="active">
                 <a class="nav-link" routerLink="search">Search</a>
             </li>
-
+            <!-- <button (click)="toggleMenu()" type="button" class="btn btn-primary">Primary</button> -->
         </ul>
-
     </div>
     <!-- Side menu -->
-    <div class="side-menu">
-        <button>Close</button>
+    <div class="side-menu" [class.active]="activeMenu">
         <ul>
             <li><a href="">All</a></li>
             <li><a href="">Clothes</a></li>
