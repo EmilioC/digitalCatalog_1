@@ -25,6 +25,33 @@ export class ProductsComponent implements OnInit {
     category: ''
   };
   products : Product [] = [];
+
+
+  constructor(
+    private storeService: StoreService,
+    private productsService: ProductsService
+  ) { 
+    this.myShoppingCart = this.storeService.getShoppingCart();
+    
+  }
+
+  ngOnInit(): void {
+    this.productsService.getAllProducts()
+    .subscribe(data =>{
+      console.log(data);
+      this.products = data;
+    });
+  }
+
+  onAddToShoppingCart(product: Product){
+    // console.log("--ADD -> PRODUCTS");
+    // console.log(product.id);
+    this.myShoppingCart.push(product);
+    this.total = this.storeService.getTotal();
+    // console.log(this.productsService.getAllProducts());
+}
+
+}
     // {
     //   id: "cod 1",
     //   name: 'Regulator 1',
@@ -89,28 +116,3 @@ export class ProductsComponent implements OnInit {
     //   img: 'https://www.w3schools.com/w3images/avatar5.png',
     // },
   
-
-  constructor(
-    private storeService: StoreService,
-    private productsService: ProductsService
-  ) { 
-    this.myShoppingCart = this.storeService.getShoppingCart();
-    
-  }
-
-  ngOnInit(): void {
-    this.productsService.getAllProducts()
-    .subscribe(data =>{
-      console.log(data);
-    });
-  }
-
-  onAddToShoppingCart(product: Product){
-    console.log("--ADD -> PRODUCTS");
-    console.log(product.id);
-    this.myShoppingCart.push(product);
-    this.total = this.storeService.getTotal();
-    console.log(this.productsService.getAllProducts());
-}
-
-}

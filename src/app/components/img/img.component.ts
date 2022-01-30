@@ -30,15 +30,15 @@ export class ImgComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy
     // No async -- one time for each component only call 1 time
     // En el constructor debemos ejecutar acciones inmediatas
     // no acciones que esperen datos (async)
-    console.log("Constructor",'imgValue =>', this.img);
+    // console.log("Constructor",'imgValue =>', this.img);
   }
 
   ngOnChanges( changes: SimpleChanges){
     // Before render
     // The function is update the changes in the inputs
     // Working many times
-    console.log('ngOnChanges', 'imgValue =>', this.img);
-    console.log(changes);
+    // console.log('ngOnChanges', 'imgValue =>', this.img);
+    // console.log(changes);
   //   //Para evaluar los cambios en los inputs, evaluan de forma individual
   //   if (changes.)´
   //   //code
@@ -49,7 +49,7 @@ export class ImgComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy
     //Berfore render
     // async - fetch - once time (solo una vez ej: cuando
     // llamamos a una API y traemos todos los datos)
-    console.log("ngOnInit()",'imgValue =>', this.img);
+    // console.log("ngOnInit()",'imgValue =>', this.img);
 
     this.counterFn= window.setInterval(()=>{
       this.counter += 1;
@@ -60,23 +60,23 @@ export class ImgComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy
   ngAfterViewInit(): void {
     //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
     //Add 'implements AfterViewInit' to the class.
-    console.log("ngAfterViewInit()",'imgValue =>', this.img);
+    // console.log("ngAfterViewInit()",'imgValue =>', this.img);
   }
 
   ngOnDestroy(){
     // delete
-    console.log("ngOnDestroy()",'imgValue =>', this.img);
+    // console.log("ngOnDestroy()",'imgValue =>', this.img);
     //Cancelamos el evento para que no se quede en 2º plano si 
     // el componente ya no está en pantalla
     window.clearInterval(this.counterFn);
   }
 
   imgError(){
-    console.log("--imgError--")
+    // console.log("--imgError--")
      this.img = this.imageDefault;
   }
   imgLoaded(){
-    console.log('Log hijo');
+    // console.log('Log hijo');
     //Emitimos envento que escucha el padre
     this.loaded.emit(this.img);
   }

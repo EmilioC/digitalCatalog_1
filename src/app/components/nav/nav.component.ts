@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, SimpleChanges } from '@angular/core';
+import { StoreService } from '../../services/store.service';
+import { Product } from '../../models/product.model';
 
 @Component({
   selector: 'app-nav',
@@ -7,14 +9,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
+  myShoppingCart: Product []= [];
+  total = 0;
   activeMenu = false;
+  
 
-  constructor() { }
+  constructor(
+    private storeService: StoreService
+  ) 
+  { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { 
+
+    window.setInterval(()=>{
+      this.total = this.storeService.getTotal();
+      this.myShoppingCart = this.storeService.getShoppingCart(); 
+    },1000)
   }
 
   toggleMenu (){
     this.activeMenu = !this.activeMenu;
   }
+  updatePriceCart(){
+    this.total = this.storeService.getTotal();
+  }
+
 }

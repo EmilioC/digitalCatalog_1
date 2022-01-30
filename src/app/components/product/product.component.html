@@ -1,36 +1,39 @@
-<!-- 
-    <div class="card mb-3 " style="max-width: 540px; "></div>
-    <div class="row g-0 ">
-        <div class="col-md-4 ">
-            <img [src]="product.img " class="img-fluid rounded-start ">
-        </div>
-        <div class="col-md-8 ">
-            <div class="card-body ">
-                <h5 class="card-title ">{{product.name}}</h5>
-            </div>
-        </div>
-        <ul class="list-group list-group-flush ">
-            <li class="list-group-item ">Price: {{product.price}}</li>
-            <li class="list-group-item ">Description: {{product.description}}</li>
-        </ul>
+<!-- <div class="card mb-3 " style="max-width: 300px; ">
+</div>
+<div class="row g-0 ">
+    <div class="col-md-4 ">
+        <img [src]="product.image " class="img-fluid rounded-start ">
     </div>
+    <div class="col-md-8 ">
+        <div class="card-body ">
+            <h5 class="card-title ">{{product.title}}</h5>
+        </div>
+    </div>
+    <ul class="list-group list-group-flush ">
+        <li class="list-group-item ">Price: {{product.price}}</li>
+        <li class="list-group-item ">Description: {{product.description}}</li>
+    </ul>
 </div> -->
 
-<!-- <div class="products--grid"> -->
-<div class="card">
-    <div class="row g-0">
-        <div class="col-md-4">
-            <!-- <img [src]="product.img" class="img-fluid rounded-start"> -->
-            <app-img [img]="product.image"></app-img>
+<div class="card" style="width: 18rem;">
+
+    <div class="row fluid-center">
+        <div class="middle">
+            <img [src]="product.image" class="center" style="max-width: 100px;">
         </div>
-        <div class=" col-md-8 ">
-            <div class="card-body ">
-                <h5 class="card-title ">Price: {{product.price}}</h5>
-                <button (click)="onAddToCart()" type="button" class="btn btn-outline-success">Add</button>
-                <p class="card-text ">Description: {{product.description}}
-                </p>
-                <p class="card-text "><small class="text-muted ">Last updated 3 mins ago</small></p>
-            </div>
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">{{product.title}}</h5>
+        <h5 class="card-title"></h5>
+        <p class="card-text">{{product.description}}</p>
+
+    </div>
+    <div class="row row-cols-2 p-2">
+        <div class="col">
+            <button type="button" (click)="onAddToCart()" class="btn btn-outline-secondary">Add</button>
+        </div>
+        <div class="col">
+            <button type="button" class="btn btn-outline-secondary float-end">{{product.price}}</button>
         </div>
     </div>
 </div>
