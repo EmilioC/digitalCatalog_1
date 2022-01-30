@@ -1,3 +1,24 @@
+<div class="card">
+    <div class="row fluid-center">
+        <div class="middle">
+            <img [src]="product.image" class="center" style="max-width: 100px;">
+        </div>
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">{{product.title}}</h5>
+        <p class="card-text">{{product.description}}</p>
+    </div>
+    <div class="row row-cols-2 p-2">
+        <div class="col">
+            <button type="button" (click)="onAddToCart()" class="btn btn-outline-secondary">Add</button>
+        </div>
+        <div class="col">
+            <button type="button" class="btn btn-outline-secondary float-end">{{product.price}}</button>
+        </div>
+    </div>
+</div>
+<br>
+
 <!-- <div class="card mb-3 " style="max-width: 300px; ">
 </div>
 <div class="row g-0 ">
@@ -14,27 +35,3 @@
         <li class="list-group-item ">Description: {{product.description}}</li>
     </ul>
 </div> -->
-
-<div class="card" style="width: 18rem;">
-
-    <div class="row fluid-center">
-        <div class="middle">
-            <img [src]="product.image" class="center" style="max-width: 100px;">
-        </div>
-    </div>
-    <div class="card-body">
-        <h5 class="card-title">{{product.title}}</h5>
-        <h5 class="card-title"></h5>
-        <p class="card-text">{{product.description}}</p>
-
-    </div>
-    <div class="row row-cols-2 p-2">
-        <div class="col">
-            <button type="button" (click)="onAddToCart()" class="btn btn-outline-secondary">Add</button>
-        </div>
-        <div class="col">
-            <button type="button" class="btn btn-outline-secondary float-end">{{product.price}}</button>
-        </div>
-    </div>
-</div>
-<br>

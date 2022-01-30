@@ -12,6 +12,7 @@ export class NavComponent implements OnInit {
   myShoppingCart: Product []= [];
   total = 0;
   activeMenu = false;
+  today = new Date();
   
 
   constructor(
@@ -24,7 +25,7 @@ export class NavComponent implements OnInit {
     window.setInterval(()=>{
       this.total = this.storeService.getTotal();
       this.myShoppingCart = this.storeService.getShoppingCart(); 
-    },1000)
+    },3000)
   }
 
   toggleMenu (){
