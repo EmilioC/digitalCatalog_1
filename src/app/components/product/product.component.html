@@ -5,7 +5,8 @@
         </div>
     </div>
     <div class="card-body">
-        <h5 class="card-title">{{product.title}}</h5>
+        <h5 class="card-title">Normal: {{ product.title }}</h5>
+        <h5 class="card-title">Reverse: {{ product.title | reverse }}</h5>
         <p class="card-text">{{product.description}}</p>
     </div>
     <div class="row row-cols-2 p-2">
