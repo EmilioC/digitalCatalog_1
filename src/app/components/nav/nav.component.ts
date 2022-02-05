@@ -12,8 +12,7 @@ export class NavComponent implements OnInit {
   myShoppingCart: Product []= [];
   total = 0;
   activeMenu = false;
-  today = new Date();
-  
+  today = new Date();  
 
   constructor(
     private storeService: StoreService

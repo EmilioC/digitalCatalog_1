@@ -4,7 +4,6 @@ import { StoreService } from '../../services/store.service';
 import { ProductsService } from '../../services/products.service';
 import { ProductComponent } from '../product/product.component';
 
-
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -14,6 +13,7 @@ export class ProductsComponent implements OnInit {
 
   myShoppingCart: Product []= [];
   total = 0;
+  
 
   @Input() product :Product =
   {
