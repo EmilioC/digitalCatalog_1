@@ -15,6 +15,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { MaterialesComponent } from './components/materiales/materiales.component';
 import { MaterialComponent } from './components/material/material.component';
+import { MaterialTarjetaComponent } from './components/material-tarjeta/material-tarjeta.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { MaterialComponent } from './components/material/material.component';
     NavbarComponent,
     HomeComponent,
     MaterialesComponent,
-    MaterialComponent
+    MaterialComponent,
+    MaterialTarjetaComponent
   ],
   imports: [
     BrowserModule,
