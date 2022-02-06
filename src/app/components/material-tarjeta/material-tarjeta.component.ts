@@ -84,7 +84,6 @@ export class MaterialTarjetaComponent implements OnInit {
     Tipo_de_Globo : '',
   };
   
-
   constructor() { }
 
   ngOnInit(): void {
