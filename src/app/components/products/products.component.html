@@ -4,11 +4,11 @@
         <span class="badge bg-secondary">{{myShoppingCart.length}}</span>
         <span class="badge bg-secondary">{{total}}</span>
       </button>
-    <!-- <app-product [product]="product" *ngFor="let product of products" (addedProduct)="onAddToShoppingCart($event)">
-    </app-product> -->
+    <app-product [product]="product" *ngFor="let product of products" (addedProduct)="onAddToShoppingCart($event)">
+    </app-product>
 </div>
 
-MATERIAL
+<!-- MATERIALES DESDE ARRAY LOCAL
 <div *ngFor="let material of myMaterial">
     <div class="card">
         <div class="row fluid-center">
@@ -25,16 +25,16 @@ MATERIAL
             <p class="card-text">Modelo {{ material.Modelo}}</p>
         </div>
         <div class="row row-cols-2 p-2">
-            <!-- <div class="col">
+           <div class="col">
             <button type="button" (click)="onAddToCart()" class="btn btn-outline-secondary">Add</button>
         </div> -->
-            <!-- <div class="col">
+<!-- <div class="col">
             <button type="button" class="btn btn-outline-secondary float-end">{{product.price}}</button>
-        </div> -->
+        </div> 
         </div>
     </div>
     <br>
-</div>
+</div> -->
 
 
 

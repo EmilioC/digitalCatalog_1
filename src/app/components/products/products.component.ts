@@ -18,8 +18,6 @@ export class ProductsComponent implements OnInit {
 
   myMaterial : any[] =[];
 
-  
-
   @Input() product :Product =
   {
     id: '',
@@ -30,7 +28,6 @@ export class ProductsComponent implements OnInit {
     category: ''
   };
   products : Product [] = [];
-
 
   constructor(
     private storeService: StoreService,

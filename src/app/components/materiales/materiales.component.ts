@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { MaterialService } from '../../services/material.service';
+import { Material } from '../../models/material.model';
 
 @Component({
   selector: 'app-materiales',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MaterialesComponent implements OnInit {
 
-  constructor() { }
+  //myMateriales since materialesSevice
+  // myMateriales : any[] =[];
+  //
+  materiales : Material []=[];
+
+  constructor(
+    private materialService: MaterialService,
+  ) { }
 
   ngOnInit(): void {
+    // this.myMateriales = this.materialService.getMaterial();
+    this.materiales = this.materialService.getMaterial();
+ ;
   }
 
 }

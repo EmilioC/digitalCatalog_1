@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
 
 @Component({
   selector: 'app-material-tarjeta',
@@ -6,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./material-tarjeta.component.scss']
 })
 export class MaterialTarjetaComponent implements OnInit {
+
+  @Input() materiales : any []=[
+    //Do: Initialize the object
+
+   
+  ];
+  
 
   constructor() { }
 
