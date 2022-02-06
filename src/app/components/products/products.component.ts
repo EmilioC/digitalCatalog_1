@@ -16,7 +16,7 @@ export class ProductsComponent implements OnInit {
   myShoppingCart: Product []= [];
   total = 0;
 
-  myMaterial : any[] =[];
+  // myMaterial : any[] =[];
 
   @Input() product :Product =
   {
@@ -35,7 +35,7 @@ export class ProductsComponent implements OnInit {
     private materialService: MaterialService,
   ) { 
     this.myShoppingCart = this.storeService.getShoppingCart();
-    this.myMaterial = this.materialService.getMaterial();
+    // this.myMaterial = this.materialService.getMaterial();
   }
 
   ngOnInit(): void {
@@ -44,7 +44,7 @@ export class ProductsComponent implements OnInit {
       console.log(data);
       this.products = data;
     });
-    console.log(this.myMaterial);
+    // console.log(this.myMaterial);
   }
 
   onAddToShoppingCart(product: Product){
