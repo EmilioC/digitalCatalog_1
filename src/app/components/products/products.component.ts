@@ -3,6 +3,8 @@ import { Product } from '../../models/product.model'
 import { StoreService } from '../../services/store.service';
 import { ProductsService } from '../../services/products.service';
 import { ProductComponent } from '../product/product.component';
+import { MaterialService } from '../../services/material.service';
+
 
 @Component({
   selector: 'app-products',
@@ -13,6 +15,9 @@ export class ProductsComponent implements OnInit {
 
   myShoppingCart: Product []= [];
   total = 0;
+
+  myMaterial : any[] =[];
+
   
 
   @Input() product :Product =
@@ -29,10 +34,11 @@ export class ProductsComponent implements OnInit {
 
   constructor(
     private storeService: StoreService,
-    private productsService: ProductsService
+    private productsService: ProductsService,
+    private materialService: MaterialService,
   ) { 
     this.myShoppingCart = this.storeService.getShoppingCart();
-    
+    this.myMaterial = this.materialService.getMaterial();
   }
 
   ngOnInit(): void {
@@ -41,6 +47,7 @@ export class ProductsComponent implements OnInit {
       console.log(data);
       this.products = data;
     });
+    console.log(this.myMaterial);
   }
 
   onAddToShoppingCart(product: Product){

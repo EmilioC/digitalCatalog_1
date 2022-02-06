@@ -4,13 +4,46 @@
         <span class="badge bg-secondary">{{myShoppingCart.length}}</span>
         <span class="badge bg-secondary">{{total}}</span>
       </button>
+    <!-- <app-product [product]="product" *ngFor="let product of products" (addedProduct)="onAddToShoppingCart($event)">
+    </app-product> -->
+</div>
+
+MATERIAL
+<div *ngFor="let material of myMaterial">
+    <div class="card">
+        <div class="row fluid-center">
+            <div class="middle">
+                <img [src]="product.image" class="center" style="max-width: 100px;">
+            </div>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Nombre: {{ material.Nombre }}</h5>
+            <h5 class="card-title">Código: {{ material.Codigo }}</h5>
+            <p class="card-text">Negocio {{ material.Negocio}}</p>
+            <p class="card-text">Categoria: {{ material.Categorias}}</p>
+            <p class="card-text">Nombre: {{ material.Nombre}}</p>
+            <p class="card-text">Modelo {{ material.Modelo}}</p>
+        </div>
+        <div class="row row-cols-2 p-2">
+            <!-- <div class="col">
+            <button type="button" (click)="onAddToCart()" class="btn btn-outline-secondary">Add</button>
+        </div> -->
+            <!-- <div class="col">
+            <button type="button" class="btn btn-outline-secondary float-end">{{product.price}}</button>
+        </div> -->
+        </div>
+    </div>
+    <br>
+</div>
+
+
+
+
+
+<!-- <div>
     <app-product [product]="product" *ngFor="let product of products" (addedProduct)="onAddToShoppingCart($event)">
     </app-product>
-</div>
-<div>
-    <app-product [product]="product" *ngFor="let product of products" (addedProduct)="onAddToShoppingCart($event)">
-    </app-product>
-</div>
+</div> -->
 
 <!-- <div class="card mb-3" style="max-width: 540px;">
     <div class="row g-0">
