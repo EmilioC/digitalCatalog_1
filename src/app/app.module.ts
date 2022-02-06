@@ -13,6 +13,7 @@ import { ReversePipe } from './pipes/reverse.pipe';
 import { TimeAgoPipe } from './pipes/time-ago.pipe';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
+import { MaterialesComponent } from './components/materiales/materiales.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HomeComponent } from './components/home/home.component';
     ReversePipe,
     TimeAgoPipe,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    MaterialesComponent
   ],
   imports: [
     BrowserModule,
