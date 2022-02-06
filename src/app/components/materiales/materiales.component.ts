@@ -21,7 +21,7 @@ export class MaterialesComponent implements OnInit {
 
   ngOnInit(): void {
     // this.myMateriales = this.materialService.getMaterial();
-    this.materiales = this.materialService.getMaterial();
+    this.materiales = this.materialService.getMateriales();
     console.log(this.materiales);
  
  ;

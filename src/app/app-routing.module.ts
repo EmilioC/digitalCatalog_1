@@ -12,9 +12,9 @@ const routes: Routes = [
   { path: 'products', component: ProductsComponent },
   { path: 'materiales', component: MaterialesComponent },
   { path: 'material-tarjeta', component: MaterialTarjetaComponent },
-  { path: 'material/:Codigo', component: MaterialComponent },
+  { path: 'material/:id', component: MaterialComponent },
 
-  { path: '**', pathMatch: 'full', redirectTo: 'home'}
+  { path: '**', pathMatch: 'full', redirectTo: 'material-tarjeta'}
 
 ];
 

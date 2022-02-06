@@ -1,18 +1,20 @@
-<div class="card animated fadeIn fast">
-    <div class="card-body" *ngFor="let material of materiales; let i = index">
-        <h4 class="card-title">Código: {{ material.Codigo}}</h4>
-        <p class="card-text">Modelo: </p>
-        <p class="card-text">Modelo: {{ material.Modelo}}</p>
-        <p class="card-text">Categorias: {{ material.Categorias}}</p>
-        <p class="card-text">Gas: {{ material.Gas}}</p>
-        <p class="card-text">Presión entrada: {{ material.Presion_1}}</p>
-        <p class="card-text">Presión salida: {{ material.Presion_2}}</p>
-        <!-- <button (click)="verMaterial(2)" type="button" class="btn btn-info">Info</button> -->
-        <a [routerLink]="['/material',i]" class="btn btn-outline-primary">Ver mas..</a>
-        <!-- <a [routerLink]="['material','{{ material.Codigo}}']" class="btn btn-outline-primary">Ver mas..</a> -->
+<div>
+    <div class="card animated fadeIn fast m-1" *ngFor="let material of materiales; let i = index">
+        <div class="card-body">
+            <h4 class="card-title">Código: {{ material.Codigo}}</h4>
+            <p class="card-text">Modelo: </p>
+            <p class="card-text">Modelo: {{ material.Modelo}}</p>
+            <p class="card-text">Categorias: {{ material.Categorias}}</p>
+            <p class="card-text">Gas: {{ material.Gas}}</p>
+            <p class="card-text">Presión entrada: {{ material.Presion_1}}</p>
+            <p class="card-text">Presión salida: {{ material.Presion_2}}</p>
+            <button (click)="verMaterial(i)" type="button" class="btn btn-info">Info</button>
+            <!-- <a [routerLink]="['/material',i]" class="btn btn-outline-primary">Ver mas..</a> -->
+            <!-- <a [routerLink]="['material','{{ material.Codigo}}']" class="btn btn-outline-primary">Ver mas..</a> -->
+        </div>
     </div>
+    <br>
 </div>
-<br>
 
 <!-- [routerLink]="['material',i]" -->
 

@@ -1,1 +1,20 @@
-<p>material works!</p>
+<div class="card animated fadeIn fast">
+    <div class="card-body">
+        <a [routerLink]="['material-tarjeta']" class="btn btn-outline-danger btn-block" aria-current="page">atrás</a>
+        <h4 class="card-title">Código: {{ material.Codigo}}</h4>
+        <p class="card-text">Modelo: </p>
+        <p class="card-text">Modelo: {{ material.Modelo}}</p>
+        <p class="card-text">Categorias: {{ material.Categorias}}</p>
+        <p class="card-text">Gas: {{ material.Gas}}</p>
+        <p class="card-text">Presión entrada: {{ material.Presion_1}}</p>
+        <p *ngIf="material.Presion_1!=''" class="card-text">Presión entrada: {{ material.Presion_1}}</p>
+        <p *ngIf="material.codigo_3==''" class="card-text"> ESTÁ VACÍO Material codigo 3: {{ material.codigo_3}}</p>
+        <p *ngIf="material.codigo_3!=''" class="card-text">ESTÁ VACÍO Material codigo 3: {{ material.codigo_3}}</p>
+        <p class="card-text">Presión salida: {{ material.Presion_2}}</p>
+        <p class="card-text">Presión salida: {{ material.Presion_2}}</p>
+        <p class="card-text">Presión salida: {{ material.Presion_2}}</p>
+
+        <!-- <a [routerLink]="['/material',i]" class="btn btn-outline-primary">Ver mas..</a> -->
+        <!-- <a [routerLink]="['material','{{ material.Codigo}}']" class="btn btn-outline-primary">Ver mas..</a> -->
+    </div>
+</div>

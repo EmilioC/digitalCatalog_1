@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Material } from '../../models/material.model';
 import { MaterialService } from '../../services/material.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -90,15 +91,15 @@ materiales : Material []=[];
   
   constructor(
     private materialService: MaterialService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
-    this.materiales = this.materialService.getMaterial();
+    this.materiales = this.materialService.getMateriales();
   }
 
-  verMaterial(codigo: number){
-    console.log(codigo);
-
+  verMaterial(idx: number){
+    this.router.navigate(['/material',idx])
   }
 
 }
