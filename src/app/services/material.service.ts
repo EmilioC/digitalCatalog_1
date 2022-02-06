@@ -28,13 +28,18 @@ export class MaterialService {
   }
 
   buscarMateriales (termino:string ){
+    console.log("--BUSCAR MATERIALES TERMINO --");
+    console.log(termino);
     let materialesArr: Material[]=[];
     termino = termino.toLowerCase();
+
     for( let i = 0; i <this.materiales.length; i++){
 
       let material = this.materiales[i];
 
-      let nombre = material.Gas.toLowerCase();
+      let materialGas = String (material.Gas);
+      
+      let nombre = materialGas.toLowerCase();
 
       if( nombre.indexOf( termino ) >= 0 ){
         

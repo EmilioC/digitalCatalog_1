@@ -16,6 +16,7 @@ import { HomeComponent } from './components/home/home.component';
 import { MaterialesComponent } from './components/materiales/materiales.component';
 import { MaterialComponent } from './components/material/material.component';
 import { MaterialTarjetaComponent } from './components/material-tarjeta/material-tarjeta.component';
+import { BuscadorComponent } from './components/buscador/buscador.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { MaterialTarjetaComponent } from './components/material-tarjeta/material
     HomeComponent,
     MaterialesComponent,
     MaterialComponent,
-    MaterialTarjetaComponent
+    MaterialTarjetaComponent,
+    BuscadorComponent
   ],
   imports: [
     BrowserModule,
