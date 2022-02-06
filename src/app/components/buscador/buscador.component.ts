@@ -11,6 +11,7 @@ import { Material } from '../../models/material.model';
 export class BuscadorComponent implements OnInit {
 
   materiales: Material []=[];
+  materialesEncontrados: number= 0;
 
   constructor(
     private activateRoute: ActivatedRoute,
@@ -20,6 +21,7 @@ export class BuscadorComponent implements OnInit {
   ngOnInit(): void {
     this.activateRoute.params.subscribe( params =>{
       this.materiales = this._materialService.buscarMateriales(params['termino']);
+      this.materialesEncontrados = this._materialService.getMaterialesEncontrados();
     })
   }
 
