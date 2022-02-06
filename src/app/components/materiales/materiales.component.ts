@@ -14,6 +14,7 @@ export class MaterialesComponent implements OnInit {
   //
   materiales : Material []=[];
 
+
   constructor(
     private materialService: MaterialService,
   ) { }
@@ -21,6 +22,8 @@ export class MaterialesComponent implements OnInit {
   ngOnInit(): void {
     // this.myMateriales = this.materialService.getMaterial();
     this.materiales = this.materialService.getMaterial();
+    console.log(this.materiales);
+ 
  ;
   }
 

@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MaterialComponent implements OnInit {
 
+  i :number=0;
   constructor() { }
 
   ngOnInit(): void {
