@@ -1,10 +1,11 @@
 <div>
+    <!-- DO: Insert for remove when result is total *ngIf="materialesEncontrados!='" -->
     <div class="spinner-grow text-light" role="status">
         <span class="visually-hidden"></span>
         <small class="text-muted center">{{materialesEncontrados}}</small>
     </div>
 
-    <div class="card animated fadeIn fast m-1" *ngFor="let material of materiales; let i = index">
+    <div class="card animated fadeIn fast m-1" *ngFor="let material of materiales; let i = index; let primero=first;let ultimo=last">
         <div class="card-body">
             <h4 class="card-title">{{ material.Nombre}}
                 <small class="text-success">{{ material.Codigo}}</small>

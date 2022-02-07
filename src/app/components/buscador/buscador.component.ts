@@ -27,7 +27,8 @@ export class BuscadorComponent implements OnInit {
     })
   }
   verMaterial(idx: number){
-    this.router.navigate(['/material',idx])
-  }
+    this.router.navigate(['/material',idx]
 
+    )}
 }
+

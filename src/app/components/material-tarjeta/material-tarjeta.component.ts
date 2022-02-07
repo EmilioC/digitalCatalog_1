@@ -13,6 +13,7 @@ export class MaterialTarjetaComponent implements OnInit {
 
 
 materiales : Material []=[];
+materialesEncontrados: number= 0;
 
   // @Input() material : Material = {
   //   //Do: Initialize the object
@@ -96,6 +97,7 @@ materiales : Material []=[];
 
   ngOnInit(): void {
     this.materiales = this.materialService.getMateriales();
+    this.materialesEncontrados = this.materiales.length;
   }
 
   verMaterial(idx: number){

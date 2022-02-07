@@ -21,9 +21,6 @@ export class MaterialComponent {
       console.log(this.material);
     })
   }
-  buscarMaterial(termino : string ){
-    console.log(termino);
 
-  }
 
 }
