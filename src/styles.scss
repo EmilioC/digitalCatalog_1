@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+
+$spinner-animation-speed: 1s;
+@keyframes spinner-border {
+    to {
+        transform: rotate(360deg) #{"/* rtl:ignore */"};
+    }
+}
+
+@keyframes spinner-grow {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        opacity: 1;
+        transform: none;
+    }
+}

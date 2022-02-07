@@ -1,22 +1,27 @@
 <nav class="navbar navbar-expand-sm navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Catálogo Digital</a>
+        <img [routerLink]="['material-tarjeta']" class="m-2" src="assets/img/carburos-logo.png" alt="" width="120" height="36">
+        <!-- <a class="navbar-brand" href="#">Catálogo Digital</a> -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item" routerLinkActive="active">
                     <a class="nav-link" [routerLink]="['material-tarjeta']">Materiales</a>
                 </li>
                 <li class="nav-item" routerLinkActive="active">
                     <a class="nav-link" [routerLink]="['products']">Products</a>
                 </li>
-            </ul>
+            </ul> -->
             <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Buscar.." aria-label="Search" (keyup.enter)="buscarMaterial(buscarTexto.value)" #buscarTexto>
-                <button (click)="buscarMaterial(buscarTexto.value)" class="btn btn-outline-success" type="button">Search</button>
+                <input class="form-control ml-auto me-2" type="search" placeholder="Buscar: gas.. nombre.. " aria-label="Search" (keyup)="buscarMaterial(buscarTexto.value)" #buscarTexto>
+                <!-- <button (click)="buscarMaterial(buscarTexto.value)" class="btn btn-outline-success me-2" type="button">Go</button> -->
+                <button [routerLink]="['material-tarjeta']" class="btn btn-outline-success" type="button">Inicio</button>
             </form>
+
         </div>
     </div>
 </nav>
+
+<!-- (keyup.enter) -->

@@ -1,16 +1,43 @@
+<!-- <div>
+    <div class="card animated fadeIn fast m-1" *ngFor="let material of materiales; let i = index">
+        <div class="card-body">
+            <button (click)="verMaterial(i)" type="button" class="btn btn-info">Info</button>
+            <h4 class="card-title">Código: {{ material.Codigo}}</h4>
+            <h5 class="card-title">Nombre: {{ material.Nombre}}</h5>
+
+
+            <div class="row">
+                <div class="col">
+                    <p class="card-text">Modelo: {{ material.Modelo}}</p>
+                    <p class="card-text">Categorias: {{ material.Categorias}}</p>
+                </div>
+                <div class="col">
+                    <p class="card-text">Categorias: {{ material.Categorias}}</p>
+                    <p class="card-text">Gas: {{ material.Gas}}</p>
+                </div>
+                <div class="col">
+                    <p class="card-text">Presión entrada: {{ material.Presion_1}}</p>
+                    <p class="card-text">Presión salida: {{ material.Presion_2}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+</div> -->
+
+
 <div>
     <div class="card animated fadeIn fast m-1" *ngFor="let material of materiales; let i = index">
         <div class="card-body">
-            <h4 class="card-title">Código: {{ material.Codigo}}</h4>
-            <p class="card-text">Modelo: </p>
+            <h4 class="card-title">{{ material.Nombre}}
+                <small class="text-muted btn-light text-success">{{ material.Codigo}}</small>
+            </h4>
             <p class="card-text">Modelo: {{ material.Modelo}}</p>
             <p class="card-text">Categorias: {{ material.Categorias}}</p>
             <p class="card-text">Gas: {{ material.Gas}}</p>
             <p class="card-text">Presión entrada: {{ material.Presion_1}}</p>
             <p class="card-text">Presión salida: {{ material.Presion_2}}</p>
             <button (click)="verMaterial(i)" type="button" class="btn btn-info">Info</button>
-            <!-- <a [routerLink]="['/material',i]" class="btn btn-outline-primary">Ver mas..</a> -->
-            <!-- <a [routerLink]="['material','{{ material.Codigo}}']" class="btn btn-outline-primary">Ver mas..</a> -->
         </div>
     </div>
     <br>
