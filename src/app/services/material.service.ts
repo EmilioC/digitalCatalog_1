@@ -196,17 +196,17 @@ export class MaterialService {
                                                                                     }else{let Unidades_Orificio = String (material.Unidades_Orificio).toLocaleLowerCase();
                                                                                       if( Unidades_Orificio.indexOf( termino ) >= 0 ){ 
                                                                                         materialesArr.push( material ) 
-                                                                                      }else{let Conexión_Entrada = String (material.Conexión_Entrada).toLocaleLowerCase();
-                                                                                        if( Conexión_Entrada.indexOf( termino ) >= 0 ){ 
+                                                                                      }else{let Conexion_Entrada = String (material.Conexion_Entrada).toLocaleLowerCase();
+                                                                                        if( Conexion_Entrada.indexOf( termino ) >= 0 ){ 
                                                                                           materialesArr.push( material ) 
-                                                                                        }else{let Conexión_Salida = String (material.Conexión_Salida).toLocaleLowerCase();
-                                                                                          if( Conexión_Salida.indexOf( termino ) >= 0 ){ 
+                                                                                        }else{let Conexion_Salida = String (material.Conexion_Salida).toLocaleLowerCase();
+                                                                                          if( Conexion_Salida.indexOf( termino ) >= 0 ){ 
                                                                                             materialesArr.push( material ) 
                                                                                           }else{let Tipo_conexion_entrada_Botella = String (material.Tipo_conexion_entrada_Botella).toLocaleLowerCase();
                                                                                             if( Tipo_conexion_entrada_Botella.indexOf( termino ) >= 0 ){ 
                                                                                               materialesArr.push( material ) 
-                                                                                            }else{let Conexión_valvula = String (material.Conexión_valvula).toLocaleLowerCase();
-                                                                                              if( Conexión_valvula.indexOf( termino ) >= 0 ){ 
+                                                                                            }else{let Conexion_valvula = String (material.Conexion_valvula).toLocaleLowerCase();
+                                                                                              if( Conexion_valvula.indexOf( termino ) >= 0 ){ 
                                                                                                 materialesArr.push( material ) 
                                                                                               }else{let Conexion_rampa = String (material.Conexion_rampa).toLocaleLowerCase();
                                                                                                 if( Conexion_rampa.indexOf( termino ) >= 0 ){ 
@@ -232,14 +232,14 @@ export class MaterialService {
                                                                                                             }else{let Unidades_Diametro_Exterior = String (material.Unidades_Diametro_Exterior).toLocaleLowerCase();
                                                                                                               if( Unidades_Diametro_Exterior.indexOf( termino ) >= 0 ){ 
                                                                                                                 materialesArr.push( material ) 
-                                                                                                              }else{let Conexión_Botella = String (material.Conexión_Botella).toLocaleLowerCase();
-                                                                                                                if( Conexión_Botella.indexOf( termino ) >= 0 ){ 
+                                                                                                              }else{let Conexion_Botella = String (material.Conexion_Botella).toLocaleLowerCase();
+                                                                                                                if( Conexion_Botella.indexOf( termino ) >= 0 ){ 
                                                                                                                   materialesArr.push( material ) 
                                                                                                                 }else{let Rosca_Espiga = String (material.Rosca_Espiga).toLocaleLowerCase();
                                                                                                                   if( Rosca_Espiga.indexOf( termino ) >= 0 ){ 
                                                                                                                     materialesArr.push( material ) 
-                                                                                                                  }else{let Material_Caña = String (material.Material_Caña).toLocaleLowerCase();
-                                                                                                                    if( Material_Caña.indexOf( termino ) >= 0 ){ 
+                                                                                                                  }else{let Material_Cana = String (material.Material_Cana).toLocaleLowerCase();
+                                                                                                                    if( Material_Cana.indexOf( termino ) >= 0 ){ 
                                                                                                                       materialesArr.push( material ) 
                                                                                                                     }else{let Material_Tuerca = String (material.Material_Tuerca).toLocaleLowerCase();
                                                                                                                       if( Material_Tuerca.indexOf( termino ) >= 0 ){ 
@@ -280,8 +280,8 @@ export class MaterialService {
                                                                                                                                             }else{let Unidades_Peso_Pallet = String (material.Unidades_Peso_Pallet).toLocaleLowerCase();
                                                                                                                                               if( Unidades_Peso_Pallet.indexOf( termino ) >= 0 ){ 
                                                                                                                                                 materialesArr.push( material ) 
-                                                                                                                                              }else{let Tamaño_Pallet = String (material.Tamaño_Pallet).toLocaleLowerCase();
-                                                                                                                                                if( Tamaño_Pallet.indexOf( termino ) >= 0 ){ 
+                                                                                                                                              }else{let Tamano_Pallet = String (material.Tamano_Pallet).toLocaleLowerCase();
+                                                                                                                                                if( Tamano_Pallet.indexOf( termino ) >= 0 ){ 
                                                                                                                                                   materialesArr.push( material ) 
                                                                                                                                                 }else{let Tiempo_de_inyeccion = String (material.Tiempo_de_inyeccion).toLocaleLowerCase();
                                                                                                                                                   if( Tiempo_de_inyeccion.indexOf( termino ) >= 0 ){ 
@@ -401,7 +401,7 @@ export class MaterialService {
 //     let nNombre = Nombre.toLowerCase(); 
 //     if( nNombre.indexOf( termino ) >= 0 ){ 
 //       if(this.buscarRepetidos(NombreCodigo ,materialesArr)){
-//         console.log("Código "+ material.Codigo + "--EXISTE")
+//         console.log("Codigo "+ material.Codigo + "--EXISTE")
 //       } else{
 //         console.log("--AÑADIDO ARRAY materialesArr --");
 //         materialesArr.push( material ) 
@@ -412,7 +412,7 @@ export class MaterialService {
 //     let nCodigo = codigo.toLowerCase(); 
 //     if( nCodigo.indexOf( termino ) >= 0 ){ 
 //       if(this.buscarRepetidos(codigo ,materialesArr)){
-//         console.log("Código "+ material.Codigo + "--EXISTE")
+//         console.log("Codigo "+ material.Codigo + "--EXISTE")
 //       } else{
 //         console.log("--AÑADIDO ARRAY materialesArr --");
 //         materialesArr.push( material ) 

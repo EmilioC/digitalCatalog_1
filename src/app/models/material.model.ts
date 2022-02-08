@@ -38,10 +38,10 @@ export interface Material{
     Material_Tubo?: any;
     Orificio?: any;
     Unidades_Orificio?: any;
-    Conexión_Entrada?: any;
-    Conexión_Salida?: any;
+    Conexion_Entrada?: any;
+    Conexion_Salida?: any;
     Tipo_conexion_entrada_Botella?: any;
-    Conexión_valvula?: any;
+    Conexion_valvula?: any;
     Conexion_rampa?: any;
     Dist_entre_tomas?: any;
     Unidades_Dist_entre_tomas?: any;
@@ -50,9 +50,9 @@ export interface Material{
     Material_colector?: any;
     Diametro_Exterior?: any;
     Unidades_Diametro_Exterior?: any;
-    Conexión_Botella?: any;
+    Conexion_Botella?: any;
     Rosca_Espiga?: any;
-    Material_Caña?: any;
+    Material_Cana?: any;
     Material_Tuerca?: any;
     Campo_de_ajuste?: any;
     Unidades_Campo_de_ajuste?: any;
@@ -66,7 +66,7 @@ export interface Material{
     Termostato?: any;
     Peso_Pallet?: any;
     Unidades_Peso_Pallet?: any;
-    Tamaño_Pallet?: any;
+    Tamano_Pallet?: any;
     Tiempo_de_inyeccion?: any;
     Unidades_Tiempo_de_inyeccion?: any;
     Tipo_de_Globo?: any;
@@ -126,7 +126,7 @@ export interface Material{
 //     Unidades_Diametro_Exterior?: any;
 //     Conexión_Botella?: any;
 //     Rosca_Espiga?: any;
-//     Material_Caña?: any;
+//     Material_Cana?: any;
 //     Material_Tuerca?: any;
 //     Campo_de_ajuste?: any;
 //     Unidades_Campo_de_ajuste?: any;
@@ -140,7 +140,7 @@ export interface Material{
 //     Termostato?: any;
 //     Peso_Pallet?: any;
 //     Unidades_Peso_Pallet?: any;
-//     Tamaño_Pallet?: any;
+//     Tamano_Pallet?: any;
 //     Tiempo_de_inyeccion?: any;
 //     Unidades_Tiempo_de_inyeccion?: any;
 //     Tipo_de_Globo?: any;

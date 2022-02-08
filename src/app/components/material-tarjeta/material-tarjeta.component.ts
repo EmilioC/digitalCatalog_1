@@ -13,6 +13,8 @@ export class MaterialTarjetaComponent implements OnInit {
 
 
 materiales : Material []=[];
+@Input() material: any = {};
+@Input() index: number = 0;
 materialesEncontrados: number= 0;
 
   // @Input() material : Material = {

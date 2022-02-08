@@ -1,4 +1,4 @@
-<div class="card animated fadeIn fast m-2">
+<!-- <div class="card animated fadeIn fast m-2">
     <div class="card-body">
         <h4 class="card-title">{{ material.Nombre}}</h4>
         <p *ngIf="material.Codigo!" class="card-text">Código: {{ material.Codigo}}</p>
@@ -14,8 +14,46 @@
         <p *ngIf="material.Regulador_Tipo!" class="card-text">Regulador tipo: {{ material.Regulador_Tipo}}</p>
         <p *ngIf="material.Material_Cierre!" class="card-text">Material cierre: {{ material.Material_Cierre}}</p>
         <p *ngIf="material.Material_Junta!" class="card-text">Material junta: {{ material.Material_Junta}}</p>
-        <!-- <a [routerLink]="['/material',i]" class="btn btn-outline-primary">Ver mas..</a> -->
-        <!-- <a [routerLink]="['material','{{ material.Codigo}}']" class="btn btn-outline-primary">Ver mas..</a> -->
     </div>
-    <a [routerLink]="['material-tarjeta']" class="btn btn-outline-success btn-block" aria-current="page">atrás</a>
+    <a [routerLink]="['materiales']" class="btn btn-outline-success btn-block" aria-current="page">atrás</a>
+</div> -->
+
+<div>
+    <h4 class="card-title btn-outline-success"></h4>
+    <div class="card animated fadeIn fast m-1">
+        <div class="card-body">
+            <h4 class="card-title">{{ material.Nombre}} </h4>
+            <p *ngIf="material.Codigo!" class="card-text">Código: {{ material.Codigo}}</p>
+            <p *ngIf="material.Modelo!" class="card-text">Modelo: {{ material.Modelo}}</p>
+            <p *ngIf="material.Categorias!" class="card-text">Categoría: {{ material.Categorias}}</p>
+            <p *ngIf="material.Sub_Categoria!" class="card-text">Sub-Categoría: {{ material.Sub_Categoria}}</p>
+            <p *ngIf="material.Sub_Categoria_2!" class="card-text">Sub_Categoria_2 {{ material.Sub_Categoria_2}}</p>
+            <p *ngIf="material.Gas!" class="card-text">Gas: {{ material.Gas}}</p>
+            <p *ngIf="material.Unidades_Presion_1!" class="card-text">Presión entrada: {{ material.Presion_1}} {{ material.Unidades_Presion_1}}</p>
+            <p *ngIf="material.Unidades_Presion_2!" class="card-text">Presión salida: {{ material.Presion_2}} {{ material.Unidades_Presion_2}}</p>
+            <p *ngIf="material.Material_Cuerpo!" class="card-text">Material cuerpo: {{ material.Material_Cuerpo}}</p>
+            <p *ngIf="material.Regulador_Tipo!" class="card-text">Regulador tipo: {{ material.Regulador_Tipo}}</p>
+            <p *ngIf="material.Material_Cierre!" class="card-text">Material cierre: {{ material.Material_Cierre}}</p>
+            <p *ngIf="material.Material_Junta!" class="card-text">Material junta: {{ material.Material_Junta}}</p>
+            <p *ngIf="material.Material_Asiento!" class="card-text">Material asiento: {{ material.Material_Asiento}}</p>
+            <p *ngIf="material.Material_Fuelle!" class="card-text">Material fuelle: {{ material.Material_Fuelle}}</p>
+            <p *ngIf="material.MateriaL_Eje!" class="card-text">Material eje: {{ material.MateriaL_Eje}}</p>
+            <p *ngIf="material.Material_Husillo!" class="card-text">Material husillo: {{ material.Material_Husillo}}</p>
+            <p *ngIf="material.Material_Bola!" class="card-text">Material bola: {{ material.Material_Bola}}</p>
+            <p *ngIf="material.Material_Tubo!" class="card-text">Material tubo: {{ material.Material_Tubo}}</p>
+            <p *ngIf="material.Orificio!" class="card-text">Orificio: {{ material.Orificio}} {{ material.Unidades_Orificio}}</p>
+            <p *ngIf="material.Conexion_Entrada!" class="card-text">Conexión_Entrada: {{ material.Conexion_Entrada}}</p>
+            <p *ngIf="material.Conexion_Salida!" class="card-text">Conexión salida: {{ material.Conexion_Salida}}</p>
+            <p *ngIf="material.Orificio!" class="card-text">Orificio: {{ material.Orificio}}</p>
+            <p *ngIf="material.Orificio!" class="card-text">Orificio: {{ material.Orificio}}</p>
+            <p *ngIf="material.Orificio!" class="card-text">Orificio: {{ material.Orificio}}</p>
+            <p *ngIf="material.Orificio!" class="card-text">Orificio: {{ material.Orificio}}</p>
+            <p *ngIf="material.Orificio!" class="card-text">Orificio: {{ material.Orificio}}</p>
+            <p *ngIf="material.Orificio!" class="card-text">Orificio: {{ material.Orificio}}</p>
+            <p *ngIf="material.Orificio!" class="card-text">Orificio: {{ material.Orificio}}</p>
+
+            <a [routerLink]="['materiales']" class="btn btn-outline-success btn-block" aria-current="page">atrás</a>
+        </div>
+    </div>
+    <br>
 </div>

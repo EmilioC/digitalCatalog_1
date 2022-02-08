@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router'
 import { MaterialService } from '../../services/material.service';
 
@@ -11,6 +11,8 @@ import { MaterialService } from '../../services/material.service';
 export class MaterialComponent {
 
  material: any = {};
+ @Input () materialInput: any ={};
+ materialesEncontrados: number= 0;
 
   constructor(
     private activatedRoute: ActivatedRoute,

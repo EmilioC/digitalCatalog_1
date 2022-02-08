@@ -13,6 +13,7 @@ export class MaterialesComponent implements OnInit {
   // myMateriales : any[] =[];
   //
   materiales : Material []=[];
+  materialesEncontrados: number= 0;
 
 
   constructor(
@@ -23,6 +24,7 @@ export class MaterialesComponent implements OnInit {
     // this.myMateriales = this.materialService.getMaterial();
     this.materiales = this.materialService.getMateriales();
     console.log(this.materiales);
+    this. materialesEncontrados = this.materiales.length;
  
  ;
   }

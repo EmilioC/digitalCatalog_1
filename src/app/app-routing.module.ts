@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'material/:id', component: MaterialComponent },
   { path: 'buscar/:termino', component: BuscadorComponent },
 
-  { path: '**', pathMatch: 'full', redirectTo: 'material-tarjeta'}
+  { path: '**', pathMatch: 'full', redirectTo: 'materiales'}
 
 ];
 
