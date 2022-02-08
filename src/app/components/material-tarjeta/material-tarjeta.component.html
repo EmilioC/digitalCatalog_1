@@ -33,15 +33,16 @@
     </div>
     <div class="card animated fadeIn fast m-1" *ngFor="let material of materiales; let i = index">
         <div class="card-body">
-            <h4 class="card-title">{{ material.Nombre}}
-                <small class="text-muted btn-light text-success">{{ material.Codigo}}</small>
-            </h4>
-            <p class="card-text">Modelo: {{ material.Modelo}}</p>
-            <p class="card-text">Categorias: {{ material.Categorias}}</p>
-            <p class="card-text">Gas: {{ material.Gas}}</p>
-            <p class="card-text">Presión entrada: {{ material.Presion_1}}</p>
-            <p class="card-text">Presión salida: {{ material.Presion_2}}</p>
-            <button (click)="verMaterial(i)" type="button" class="btn btn-info">Info</button>
+            <h4 class="card-title">{{ material.Nombre}} </h4>
+            <p *ngIf="material.Codigo!" class="card-text">Código: {{ material.Codigo}}</p>
+            <p *ngIf="material.Modelo!" class="card-text">Modelo: {{ material.Modelo}}</p>
+            <p *ngIf="material.Categorias!" class="card-text">Categoría: {{ material.Categorias}}</p>
+            <p *ngIf="material.Sub_Categoria!" class="card-text">Sub-Categoría: {{ material.Sub_Categoria}}</p>
+            <p *ngIf="material.Sub_Categoria_2!" class="card-text">Sub_Categoria_2 {{ material.Sub_Categoria_2}}</p>
+            <p *ngIf="material.Gas!" class="card-text">Gas: {{ material.Gas}}</p>
+            <p *ngIf="material.Unidades_Presion_1!" class="card-text">Presión entrada: {{ material.Presion_1}} {{ material.Unidades_Presion_1}}</p>
+            <p *ngIf="material.Unidades_Presion_2!" class="card-text">Presión salida: {{ material.Presion_2}} {{ material.Unidades_Presion_2}}</p>
+            <button (click)="verMaterial(i)" type="button" class="btn btn-outline-success">...</button>
         </div>
     </div>
     <br>
