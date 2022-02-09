@@ -16,6 +16,7 @@ materiales : Material []=[];
 @Input() material: any = {};
 @Input() index: number = 0;
 materialesEncontrados: number= 0;
+ampliarInfo: boolean = false;
 
   // @Input() material : Material = {
   //   //Do: Initialize the object
@@ -104,6 +105,10 @@ materialesEncontrados: number= 0;
 
   verMaterial(idx: number){
     this.router.navigate(['/material',idx])
+  }
+
+  mostrarInfo(){
+    this.ampliarInfo = !this.ampliarInfo;
   }
 
 }

@@ -1,7 +1,8 @@
-<div class="spinner-grow text-light" role="status">
-    <span class="visually-hidden"></span>
-    <small class="text-muted center">{{materialesEncontrados}}</small>
+<div>
+    <div class="spinner-grow text-light" role="status">
+        <span class="visually-hidden"></span>
+        <small class="text-muted center">{{materialesEncontrados}}</small>
+    </div>
+    <app-material-tarjeta [material]="material" [index]="i" *ngFor="let material of materiales; let i = index">
+    </app-material-tarjeta>
 </div>
-<app-material-tarjeta [material]="material" [index]="i" *ngFor="let material of materiales; let i = index">
-
-</app-material-tarjeta>

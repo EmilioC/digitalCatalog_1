@@ -22,7 +22,7 @@
 </div> -->
 
 <!-- With *ngFor received by materiales component with @Input -->
-<div>
+<!-- <div>
     <h4 class="card-title btn-outline-success"></h4>
     <div class="card animated fadeIn fast m-1">
         <div class="card-body">
@@ -67,5 +67,59 @@
             <p *ngIf="material.Tiempo_de_inyeccion!" class="card-text">Tiempo de inyección: {{ material.Tiempo_de_inyeccion}} {{ material.Unidades_Tiempo_de_inyeccion}}</p>
             <p *ngIf="material.Tipo_de_Globo!" class="card-text">Tipo_de_Globo: {{ material.Tipo_de_Globo}}</p>
             <p *ngIf="material.Tamano_Pallet!" class="card-text">Tamaño_Pallet: {{ material.Tamano_Pallet}}</p>
-            <a [routerLink]="['materiales']" class="btn btn-outline-success btn-block" aria-current="page">atrás</a>
+        </div> -->
+
+<div (click)="mostrarInfo()">
+    <div class="card animated fadeIn fast m-1">
+
+        <div class="card-body">
+            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            <h4 class="card-title">{{ material.Nombre}} </h4>
+            <p *ngIf="material.Categoria_Gas!" class="card-text">{{ material.Categoria_Gas}}</p>
+            <p *ngIf="material.Sub_Categoria!" class="card-text">{{ material.Sub_Categoria}}</p>
+
+            <div *ngIf="ampliarInfo">
+                <p *ngIf="material.Categorias!" class="card-text">{{ material.Categorias}}</p>
+                <p *ngIf="material.Modelo!" class="card-text">Modelo: {{ material.Modelo}}</p>
+
+                <p *ngIf="material.Codigo!" class="card-text">Código: {{ material.Codigo}}</p>
+
+
+                <p *ngIf="material.Sub_Categoria_2!" class="card-text">Sub_Categoria_2 {{ material.Sub_Categoria_2}}</p>
+                <p *ngIf="material.Gas!" class="card-text">Gas: {{ material.Gas}}</p>
+                <p *ngIf="material.Unidades_Presion_1!" class="card-text">Presión entrada: {{ material.Presion_1}} {{ material.Unidades_Presion_1}}</p>
+                <p *ngIf="material.Unidades_Presion_2!" class="card-text">Presión salida: {{ material.Presion_2}} {{ material.Unidades_Presion_2}}</p>
+                <p *ngIf="material.Material_Cuerpo!" class="card-text">Material cuerpo: {{ material.Material_Cuerpo}}</p>
+                <p *ngIf="material.Regulador_Tipo!" class="card-text">Regulador tipo: {{ material.Regulador_Tipo}}</p>
+                <p *ngIf="material.Material_Cierre!" class="card-text">Material cierre: {{ material.Material_Cierre}}</p>
+                <p *ngIf="material.Material_Junta!" class="card-text">Material junta: {{ material.Material_Junta}}</p>
+                <p *ngIf="material.Material_Asiento!" class="card-text">Material asiento: {{ material.Material_Asiento}}</p>
+                <p *ngIf="material.Material_Fuelle!" class="card-text">Material fuelle: {{ material.Material_Fuelle}}</p>
+                <p *ngIf="material.MateriaL_Eje!" class="card-text">Material eje: {{ material.MateriaL_Eje}}</p>
+                <p *ngIf="material.Material_Husillo!" class="card-text">Material husillo: {{ material.Material_Husillo}}</p>
+                <p *ngIf="material.Material_Bola!" class="card-text">Material bola: {{ material.Material_Bola}}</p>
+                <p *ngIf="material.Material_Tubo!" class="card-text">Material tubo: {{ material.Material_Tubo}}</p>
+                <p *ngIf="material.Orificio!" class="card-text">Orificio: {{ material.Orificio}} {{ material.Unidades_Orificio}}</p>
+                <p *ngIf="material.Conexion_Entrada!" class="card-text">Conexión_Entrada: {{ material.Conexion_Entrada}}</p>
+                <p *ngIf="material.Conexion_Salida!" class="card-text">Conexión salida: {{ material.Conexion_Salida}}</p>
+                <p *ngIf="material.Tipo_conexion_entrada_Botella!" class="card-text">Tipo conexión entrada botella: {{ material.Tipo_conexion_entrada_Botella}}</p>
+                <p *ngIf="material.Conexion_valvula!" class="card-text">Conexión válvula: {{ material.Conexion_valvula}}</p>
+                <p *ngIf="material.Conexion_rampa!" class="card-text">Conexión rampa: {{ material.Conexion_rampa}}</p>
+                <p *ngIf="material.Dist_entre_tomas!" class="card-text">Distancia entre tomas: {{ material.Dist_entre_tomas}} {{ material.Unidades_Dist_entre_tomas}}</p>
+                <p *ngIf="material.Dist_entre_soportes!" class="card-text">Distancia entre soportes: {{ material.Dist_entre_soportes}} {{ material.Unidades_Dist_entre_soportes}}</p>
+                <p *ngIf="material.Material_colector!" class="card-text">Material colector: {{ material.Material_colector}}</p>
+                <p *ngIf="material.Diametro_Exterior!" class="card-text">Diametro exterior: {{ material.Diametro_Exterior}} {{ material.Unidades_Diametro_Exterior}}</p>
+                <p *ngIf="material.Rosca_Espiga!" class="card-text">Rosca espiga: {{ material.Rosca_Espiga}}</p>
+                <p *ngIf="material.Material_Cana!" class="card-text">Conexion rampa: {{ material.Material_Cana}}</p>
+                <p *ngIf="material.Material_Tuerca!" class="card-text">Material tuerca: {{ material.Material_Tuerca}}</p>
+                <p *ngIf="material.Campo_de_ajuste!" class="card-text">Campo de ajuste: {{ material.Campo_de_ajuste}} {{ material.Unidades_Campo_de_ajuste}}</p>
+                <p *ngIf="material.Clasificacion_Proteccion!" class="card-text">Clasificacion protección: {{ material.Clasificacion_Proteccion}}</p>
+                <p *ngIf="material.Resistencia!" class="card-text">Resistencia: {{ material.Resistencia}}</p>
+                <p *ngIf="material.Contenedor!" class="card-text">Contenedor: {{ material.Contenedor}} {{ material.Unidades_Contenedor}}</p>
+                <p *ngIf="material.Peso_Pallet!" class="card-text">Peso pallet: {{ material.Peso_Pallet }} {{ material.Unidades_Peso_Pallet }}</p>
+                <p *ngIf="material.Tamano_Pallet!" class="card-text">Tamaño_Pallet: {{ material.Tamano_Pallet}}</p>
+                <p *ngIf="material.Tiempo_de_inyeccion!" class="card-text">Tiempo de inyección: {{ material.Tiempo_de_inyeccion}} {{ material.Unidades_Tiempo_de_inyeccion}}</p>
+                <p *ngIf="material.Tipo_de_Globo!" class="card-text">Tipo_de_Globo: {{ material.Tipo_de_Globo}}</p>
+                <p *ngIf="material.Tamano_Pallet!" class="card-text">Tamaño_Pallet: {{ material.Tamano_Pallet}}</p>
+            </div>
         </div>

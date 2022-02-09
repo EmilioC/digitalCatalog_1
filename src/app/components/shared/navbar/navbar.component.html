@@ -1,27 +1,38 @@
-<nav class="navbar navbar-expand-sm navbar-light bg-light">
+<div [routerLink]="['materiales']" class="navbar navbar-expand-sm navbar-light bg-light">
+    <img [routerLink]="['materiales']" class="m-2" src="assets/img/carburos-logo.png" alt="" width="120" height="36">
+    <input class="form-control ml-auto me-2" type="search" placeholder="Buscar en catálogo digital ..." aria-label="Search" (keyup)="buscarMaterial(buscarTexto.value)" #buscarTexto>
+</div>
+
+
+<!-- <nav class="navbar navbar-expand-sm navbar-light bg-light ">
     <div class="container-fluid">
         <img [routerLink]="['materiales']" class="m-2" src="assets/img/carburos-logo.png" alt="" width="120" height="36">
-        <!-- <a class="navbar-brand" href="#">Catálogo Digital</a> -->
+        <input class="form-control ml-auto me-2" type="search" placeholder="Buscar: gas.. nombre.. " aria-label="Search" (keyup)="buscarMaterial(buscarTexto.value)" #buscarTexto>
+    </div>
+</nav> -->
+
+<!-- <nav class="navbar navbar-expand-sm navbar-light bg-light ">
+    <div class="container-fluid ml-auto">
+        <img [routerLink]="['materiales']" class="m-2" src="assets/img/carburos-logo.png" alt="" width="120" height="36">
+       
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item" routerLinkActive="active">
                     <a class="nav-link" [routerLink]="['materiales']">Materiales</a>
                 </li>
-                <!-- <li class="nav-item" routerLinkActive="active">
+                <li class="nav-item" routerLinkActive="active">
                     <a class="nav-link" [routerLink]="['products']">Products</a>
-                </li> -->
+                </li>
             </ul>
             <form class="d-flex">
                 <input class="form-control ml-auto me-2" type="search" placeholder="Buscar: gas.. nombre.. " aria-label="Search" (keyup)="buscarMaterial(buscarTexto.value)" #buscarTexto>
-                <!-- <button (click)="buscarMaterial(buscarTexto.value)" class="btn btn-outline-success me-2" type="button">Go</button> -->
-                <button [routerLink]="['material-tarjeta']" class="btn btn-outline-success" type="button">Inicio</button>
+                <button (click)="buscarMaterial(buscarTexto.value)" class="btn btn-outline-success me-2" type="button">Go</button> 
+                <button [routerLink]="['materiales']" class="btn btn-outline-success" type="button">Inicio</button>
             </form>
 
         </div>
     </div>
-</nav>
-
-<!-- (keyup.enter) -->
+</nav> -->

@@ -12,7 +12,7 @@ export class MaterialComponent {
 
  material: any = {};
  @Input () materialInput: any ={};
- materialesEncontrados: number= 0;
+
 
   constructor(
     private activatedRoute: ActivatedRoute,

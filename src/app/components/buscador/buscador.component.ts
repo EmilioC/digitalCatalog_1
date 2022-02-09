@@ -14,6 +14,7 @@ export class BuscadorComponent implements OnInit {
   materiales: Material []=[];
   materialesEncontrados: number= 0;
 
+
   constructor(
     private activateRoute: ActivatedRoute,
     private _materialService: MaterialService,
