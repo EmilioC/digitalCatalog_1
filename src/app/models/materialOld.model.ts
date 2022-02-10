@@ -10,7 +10,7 @@ export interface Material{
     Modelo?: any;
     Nombre?: any;
     Texto_Codigo?: any;
-    Codigo?: any;
+    Codigo: any;
     Texto_Codigo_2?: any;
     Codigo_Purga?: any;
     Texto_Codigo_3?: any;
@@ -70,15 +70,6 @@ export interface Material{
     Tiempo_de_inyeccion?: any;
     Unidades_Tiempo_de_inyeccion?: any;
     Tipo_de_Globo?: any;
-    descripcionJunta?: any;
-    medidaJunta?: any;
-    fuenteMaterial?: any;
-    precio?: any;
-    fechaPrecio?: any;
-    referenciaProveedor?: any;
-    proveedor?: any;
-    marca?: any;
-    codigoPadre?: any;
 }
 
 // export interface Material{

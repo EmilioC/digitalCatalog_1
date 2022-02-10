@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Material } from '../models/material.model';
-import { DATA } from '../../assets/data/data06022022';
+import { DATA } from '../../assets/data/dataMaster_Boom';
 
 @Injectable({
   providedIn: 'root'
@@ -292,7 +292,43 @@ export class MaterialService {
                                                                                                                                                     }else{let Tipo_de_Globo = String (material.Tipo_de_Globo).toLocaleLowerCase();
                                                                                                                                                       if( Tipo_de_Globo.indexOf( termino ) >= 0 ){ 
                                                                                                                                                         materialesArr.push( material ) 
-                                                                                                                                                      }else{
+                                                                                                                                                      }else{let descripcionJunta = String (material.descripcionJunta).toLocaleLowerCase();
+                                                                                                                                                        if( descripcionJunta.indexOf( termino ) >= 0 ){ 
+                                                                                                                                                          materialesArr.push( material ) 
+                                                                                                                                                        }else{let medidaJunta = String (material.medidaJunta).toLocaleLowerCase();
+                                                                                                                                                          if( medidaJunta.indexOf( termino ) >= 0 ){ 
+                                                                                                                                                            materialesArr.push( material ) 
+                                                                                                                                                          }else{let fuenteMaterial = String (material.fuenteMaterial).toLocaleLowerCase();
+                                                                                                                                                            if( fuenteMaterial.indexOf( termino ) >= 0 ){ 
+                                                                                                                                                              materialesArr.push( material ) 
+                                                                                                                                                            }else{let precio = String (material.precio).toLocaleLowerCase();
+                                                                                                                                                              if( precio.indexOf( termino ) >= 0 ){ 
+                                                                                                                                                                materialesArr.push( material ) 
+                                                                                                                                                              }else{let fechaPrecio = String (material.fechaPrecio).toLocaleLowerCase();
+                                                                                                                                                                if( fechaPrecio.indexOf( termino ) >= 0 ){ 
+                                                                                                                                                                  materialesArr.push( material ) 
+                                                                                                                                                                }else{let referenciaProveedor = String (material.referenciaProveedor).toLocaleLowerCase();
+                                                                                                                                                                  if( referenciaProveedor.indexOf( termino ) >= 0 ){ 
+                                                                                                                                                                    materialesArr.push( material ) 
+                                                                                                                                                                  }else{let proveedor = String (material.proveedor).toLocaleLowerCase();
+                                                                                                                                                                    if( proveedor.indexOf( termino ) >= 0 ){ 
+                                                                                                                                                                      materialesArr.push( material ) 
+                                                                                                                                                                    }else{let marca = String (material.marca).toLocaleLowerCase();
+                                                                                                                                                                      if( marca.indexOf( termino ) >= 0 ){ 
+                                                                                                                                                                        materialesArr.push( material ) 
+                                                                                                                                                                      }else{let codigoPadre = String (material.codigoPadre).toLocaleLowerCase();
+                                                                                                                                                                        if( codigoPadre.indexOf( termino ) >= 0 ){ 
+                                                                                                                                                                          materialesArr.push( material ) 
+                                                                                                                                                                        }else{
+                                                                                                                                                                              }
+                                                                                                                                                                            }
+                                                                                                                                                                          }
+                                                                                                                                                                        }
+                                                                                                                                                                      }
+                                                                                                                                                                    }
+                                                                                                                                                                  }
+                                                                                                                                                                }
+                                                                                                                                                              }
                                                                                                                                                             }
                                                                                                                                                           }
                                                                                                                                                         }
