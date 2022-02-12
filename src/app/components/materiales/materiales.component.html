@@ -3,6 +3,35 @@
         <span class="visually-hidden"></span>
         <small class="text-muted center">{{materialesEncontrados}}</small>
     </div>
-    <app-material-tarjeta [material]="material" [index]="i" *ngFor="let material of materiales; let i = index">
-    </app-material-tarjeta>
 </div>
+<!-- <app-material-tarjeta [material]="material" [index]="i" *ngFor="let material of materiales; let i = index">
+</app-material-tarjeta> -->
+
+<div class="row">
+    <div class="col-2 col-md-2 overflowScroll auto">
+
+    </div>
+    <div class="col-2 col-md-2 overflowScroll auto">
+        <h1>VAMOS</h1>
+        <app-material-tarjeta [material]="material" [index]="i" *ngFor="let material of materiales; let i = index">
+        </app-material-tarjeta>
+
+    </div>
+    <div class="col-0 col-md-2 overflowScroll auto bg-light">
+        <app-products></app-products>
+    </div>
+</div>
+
+<!-- 
+<div class="row">
+    <div class="col-4 col-md-2 overflowScroll auto bg-light">
+        <app-material-tarjeta [material]="material" [index]="i" *ngFor="let material of materiales; let i = index">
+        </app-material-tarjeta>
+    </div>
+    <div class="col overflowScroll auto">
+        <app-products></app-products>
+    </div>
+    <div class="col-0 col-md-2 overflowScroll auto bg-light">
+        <app-materiales></app-materiales>
+    </div>
+</div> -->

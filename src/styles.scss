@@ -16,3 +16,31 @@ $spinner-animation-speed: 1s;
         transform: none;
     }
 }
+
+#global {
+    height: 50%;
+    width: 100%;
+    // max-width: 100%;
+    overflow-y: scroll;
+}
+
+#global_1 {
+    height: 50%;
+    width: auto;
+    overflow-y: auto;
+}
+
+.body {
+    position: relative;
+}
+
+.overflowScroll {
+    // overflow: hidden;
+    overflow-y: scroll;
+    height: 100rem;
+    // width: 50%;
+}
+
+#mensajes_1 {
+    height: auto;
+}
