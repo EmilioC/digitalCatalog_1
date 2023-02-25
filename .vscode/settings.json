@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/51a296c0-7cba-4d01-86db-36095f16a91d/resourceGroups/App_Angular_1/providers/Microsoft.Web/sites/emiliocordoba",
+    "appService.deploySubpath": "dist\\digital-catalog-1"
+}
