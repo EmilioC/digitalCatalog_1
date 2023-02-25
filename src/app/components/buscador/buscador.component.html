@@ -8,15 +8,14 @@
 </app-material-tarjeta> -->
 
 <div class="row">
-    <div class="col-2 col-md-2 overflowScroll auto">
+<!--     <div class="col-2 col-md-2 overflowScroll auto">
         <h1>PRIMERO</h1>
-    </div>
-    <div class="col col-md-2 overflowScroll auto">
-        <h1>APP MATERIAL</h1>
+    </div> -->
+    <div class="col col-md overflowScroll auto">
         <app-material-tarjeta [material]="material" [index]="i" *ngFor="let material of materiales; let i = index">
         </app-material-tarjeta>
     </div>
-
+<!-- 
     <div class="col col-md-2 overflowScroll auto">
         <h1>APP MATERIAL</h1>
         <app-material-tarjeta [material]="material" [index]="i" *ngFor="let material of materiales; let i = index">
@@ -25,7 +24,7 @@
     <div class="col-0 col-md-8 overflowScroll auto bg-light">
         <h1>APP PRODUCTS</h1>
         <app-products></app-products>
-    </div>
+    </div> -->
 </div>
 
 
