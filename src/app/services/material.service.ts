@@ -10,12 +10,9 @@ export class MaterialService {
   private materiales : Material[]=[];
   materialesEncontrados: number =0;
 
-  constructor(
+  constructor() { this.materiales = DATA;}
 
-  ) { this.materiales = DATA;}
-
-  ngOnInit(): void {    
-  }
+  ngOnInit(): void { }
 
   getMateriales(){
     return this.materiales;
